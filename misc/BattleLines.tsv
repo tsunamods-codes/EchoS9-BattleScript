@@ -1,0 +1,1632 @@
+Speaker	With	File	Text	Next line	When	Priority	Weight	Command Id	Target / Caster	Status	Items	Abilities	BattleId	Scenario Min	Scenario Max	Context Flags	Player Solo	Player Team	Enemy Solo	Enemy Team	Self	Enemy	Ally	Single	Multi	Hit	Miss	Dodge	Crit	Hp	Mp	Front Attack	Preemptive	Back Attack	Friendly Battle	Non Friendly Battle	Serious	Boss
+Zidane		Intro 1	I don't feel like losing.		BattleStart																													x	x			x
+Zidane		Intro 2	This is gonna be quick.		BattleStart																													x	x			x
+Zidane		Intro 3	So, shall we get started?		BattleStart																													x	x			x
+Zidane		Intro 4	I'm goin' all in!		BattleStart																													x	x			x
+Zidane		Intro 5	I'm gonna steal a win.		BattleStart																													x	x			x
+Zidane		Intro 6	Fine by me, I'll take you on!		BattleStart																													x	x			x
+Zidane		Intro 7	Good timing, I was getting bored.		BattleStart																													x	x			x
+Zidane		Intro 8	This should be fun!		BattleStart																													x	x			x
+Zidane		Intro 9	A dance? You're on!		BattleStart																													x	x			x
+Zidane		Intro 10	So, who's going first?		BattleStart												x																	x	x			x
+Zidane		Intro 11	The winners the one who strikes first, yeah?		BattleStart																													x	x			x
+Zidane		Intro 12	This should be entertaining.		BattleStart																													x	x			x
+Zidane		Intro 13	Time to show em' what we can do!		BattleStart												x																	x	x			x
+Zidane		Intro 14	Looks boring, you guys can take this one.		BattleStart												x																	x	x			x
+Zidane		Intro 15	I hope you're ready.		BattleStart																													x	x			x
+Zidane		Intro 16	I'm looking forward to this!		BattleStart																													x	x			x
+Zidane		Intro 17	Can't be helped.		BattleStart																													x	x			x
+Zidane		Intro 18	This supposed to be a challenge?		BattleStart																													x	x			x
+Zidane		Intro 19	Come at us! I'm ready.		BattleStart												x																	x	x			x
+Zidane		Intro 20	Ready when you are!		BattleStart																													x	x			x
+Zidane		Intro 21	Perfect day for a fight!		BattleStart																													x	x			x
+Zidane		Intro 22	Eh, you don't look so tough.		BattleStart																													x	x			x
+Zidane		Intro 23	Aww, it's kinda cute.		BattleStart																													x	x			x
+Zidane		Intro 24	A fight? For me? You shouldn't have.		BattleStart																													x	x			x
+Zidane		Intro 25	That time already?		BattleStart																													x	x			x
+Zidane		Intro 26	Fighting us isn't the smartest move.. just a heads up.		BattleStart												x																	x	x			x
+Zidane		Intro 27	Have we fought before? Nahh.		BattleStart																													x	x			x
+Zidane		Intro 28	You don't know what's about to hit you!		BattleStart																													x	x			x
+Zidane		Intro 29	I'll give ya 5 seconds to run.		BattleStart																													x	x			x
+Zidane		Intro 30	Time for a showdown!		BattleStart																													x	x			x
+Zidane		Intro 31	Think you can take me?		BattleStart													x																x	x			x
+Zidane		Intro 32	Good luck, you'll need it!		BattleStart																													x	x			x
+Zidane		Intro 33	Let's do this!		BattleStart																													x	x			x
+Zidane		Intro 34	This'll be easy!		BattleStart																													x	x			x
+Zidane		Intro 35	No time like the present!		BattleStart																													x	x			x
+Zidane		Intro 36	Which one should I take on first?		BattleStart														x															x	x			x
+Zidane		Intro 37	Don't over do it.		BattleStart												x																	x	x			x
+Zidane		Intro 38	Stay sharp now.		BattleStart												x																	x	x			x
+Zidane		Intro 39	What do you think team, nice and slow? ...Nah.		BattleStart												x																	x	x			x
+Zidane		Attack 1			HitEffect			Attack																					x									
+Zidane		Attack 2			HitEffect			Attack																					x									
+Zidane		Attack 3			HitEffect			Attack																					x									
+Zidane		Attack 4			HitEffect			Attack																					x									
+Zidane		Attack 5			HitEffect			Attack																					x									
+Zidane		Attack 6			HitEffect			Attack																					x									
+Zidane		Attack 7			HitEffect			Attack																					x									
+Zidane		Attack 8			HitEffect			Attack																					x									
+Zidane		Attack 9			HitEffect			Attack																					x									
+Zidane		Attack 10			HitEffect			Attack																					x									
+Zidane		Attack 11			HitEffect			Attack																					x									
+Zidane		Change Back 1	You guys got that.		ChangeBack												x																					
+Zidane		Change Back 2	Need a vantage point.		ChangeBack																																	
+Zidane		Change Back 3	I'm gonna step here.		ChangeBack																																	
+Zidane		Change Front 1	Time for a little switch-a-roo.		ChangeFront																																	
+Zidane		Change Front 2	Back in the frey!		ChangeFront																																	
+Zidane		Change Front 3	Taking center stage.		ChangeFront																																	
+Zidane		Change Front 4	I'll take the lead.		ChangeFront												x																					
+Zidane		Change Front 5	Behind me people.		ChangeFront												x																					
+Zidane		Crit 1	Got you!		HitEffect			Attack															x			x	x	x										
+Zidane		Crit 2	Dodge this!		HitEffect			Attack															x			x	x	x										
+Zidane		Crit 3			HitEffect			Attack																		x	x	x										
+Zidane		Crit 4			HitEffect			Attack																		x	x	x										
+Zidane		Crit 5			HitEffect			Attack																		x	x	x										
+Zidane		Damage 1	That was a cheap shot.		Damaged																x		x		x	x	x	x										
+Zidane		Damage 2			Damaged																																	
+Zidane		Damage 3			Damaged																																	
+Zidane		Damage 4	That's dirty!		Damaged																x		x		x	x	x	x										
+Zidane		Damage 5			Damaged																																	
+Zidane		Damage 6			Damaged																																	
+Zidane		Damage 7			Damaged																																	
+Zidane		Damage 8			Damaged																																	
+Zidane		Damage 9			Damaged																																	
+Zidane		Death 1	Why did it have to end like this.		Added					Death																												
+Zidane		Death 2	Let's forget this happened.		Added					Death																												
+Zidane		Death 3	It's up to you guys now.		Added					Death																												
+Zidane		Death 4	I'm just gonna lay down.		Added					Death																												
+Zidane		Death 5	I'll get you for that.		Added					Death																												
+Zidane		Death 6	When I wake up, I'll get you..		Added					Death																												
+Zidane		Death 7	I leave it to you guys.		Added					Death																												
+Zidane		Death 8	Please, don't go through my room..		Added					Death																												
+Zidane		Death 9	Guys, don't go through my things..		Added					Death																												
+Zidane		Death 10	Why? This can't be...		Added					Death																												
+Zidane		Death 11	Guys... I'm sorry.		Added					Death							x																					
+Zidane		Defend 1	Can't hit me.		CommandPerform			Defend																														
+Zidane		Defend 2	Alright, come on! Try me!		CommandPerform			Defend																														
+Zidane		Defend 3	Gimme your best shot.		CommandPerform			Defend																														
+Zidane		Defend 4	I can do this all day.		CommandPerform			Defend																														
+Zidane		Detect 1	Wonder what we got here.		HitEffect							Detect																										
+Zidane		Detect 2	Oh you gotta see this!		HitEffect							Detect																										
+Zidane		Detect 3	Hmm, interesting.		HitEffect							Detect																										
+Zidane		Detect 4	Aha, so that's how you do it.		HitEffect							Detect																										
+Zidane		Detect 5	Well, well. Would ya look at that.		HitEffect							Detect																										
+Zidane		Detect 6	Well, well... What do you know.		HitEffect							Detect															x	x										
+Zidane		Detect 7	Ah ah, now look at this.		HitEffect							Detect															x	x										
+Zidane		Detect 8	Woaw! Hey guys look at this.		HitEffect							Detect					x										x	x										
+Zidane		Detect 9	Oh you gotta see this guys.		HitEffect							Detect					x										x	x										
+Zidane		Dodge 1	Whoah!		Dodged, Missed																				x													
+Zidane		Dodge 2	Na-ah-ahh.		Dodged, Missed																				x													
+Zidane		Dodge 3	Ohh, nice moves.		Dodged, Missed																				x													
+Zidane		Dodge 4	Not today!		Dodged, Missed																				x													
+Zidane		Dodge 5	Too slow.		Dodged, Missed																				x													
+Zidane		Dodge 6	Yeah, good luck.		Dodged, Missed																				x													
+Zidane		Dodge 7	You blind?		Dodged, Missed																				x													
+Zidane		Dodge 8	Close, but no cigar!		Dodged, Missed																				x													
+Zidane		Dodge 9	Not a bad try!		Dodged, Missed																				x													
+Zidane		Dodge 10	Over here!		Dodged, Missed																				x													
+Zidane		Flee 1	Later alligator.		Flee																																	
+Zidane		Flee 2	See ya in a while Crocodile.		Flee																																	
+Zidane		Flee 3	Yeah, we're outta here.		Flee																																	
+Zidane		Flee 4	Hasta la bye bye.		Flee																																	
+Zidane		Flee 5	Let's make like a tree and split.		Flee																																	
+Zidane		Flee 6	No! No thank you.		Flee																																	
+Zidane		Flee 7	See ya! Wouldn't wanna be ya.		Flee																																	
+Zidane		Flee 8	Bye! I...I'll call you.		Flee																																	
+Zidane		Flee 9	Let's make like a chocobo and wark.		Flee																																	
+Zidane		Heal 1	A friend in need?		CommandPerform			Item													x	x																
+Zidane		Heal 2	Never hurts to ask for help.		CommandPerform			Item													x	x																
+Zidane		Heal 3	I got your back.		CommandPerform			Item													x	x																
+Zidane		Heal 4	Don't need a reason to help people.		CommandPerform			Item													x	x																
+Zidane		Heal 5	This should help.		CommandPerform			Item													x	x																
+Zidane		Heal 6	I'm gonna need to steal more of these...		CommandPerform		50	Item													x	x																
+Zidane		Heal 7	I'm gonna need to steal more of these...		CommandPerform		50	Item													x	x																
+Zidane		Heal 8	These don't come cheap y'know.		CommandPerform			Item													x	x																
+Zidane		Heal Self 1	Can't kick the bucket yet.		CommandPerform			Item														x	x															
+Zidane		Healed 1	Ahh, that's the stuff!		Healed				\Steiner													x																
+Zidane		Healed 2	Right in the nick of time.		Healed				\Steiner													x			x													
+Zidane		Healed 3	I was totally fine, but thanks anyway.		Healed																x	x			x													
+Zidane		Healed 4	Woohoo, let's keep it going.		Healed																																	
+Zidane		Healed 5	Yeah, keep it comin'.		Healed																x																	
+Zidane		Healed 6	Aww, you shouldn't have.		Healed																x																	
+Zidane		Kill 1	Didn't see that comin' did ya!		KillEffect																x		x															
+Zidane		Kill 2	And you're out!		KillEffect																x		x															
+Zidane		Kill 3	Too easy!		KillEffect																x		x															
+Zidane		Kill 4	Another one for me!		KillEffect																x		x		x													
+Zidane		Kill 5	Have a nice trip!		KillEffect																x		x															
+Zidane		Kill 6	Not today!		KillEffect																x		x															
+Zidane		Kill 7	Time's up!		KillEffect																x		x															
+Zidane		Kill 8	Got you good!		KillEffect																x		x															
+Zidane	$Steiner	Kill 9	Keeping count, Steiner?		KillEffect																x		x															
+Zidane		Kill 13	Down you go!		KillEffect																x		x															
+Zidane		Kill 14	End of the line!		KillEffect																x		x															
+Zidane		Kill 15	Another one!		KillEffect																x		x															
+Zidane		Kill 16	Damn, I'm good.		KillEffect																x		x															
+Zidane		Kill 17	That all you got?		KillEffect																x		x															
+Zidane		Kill 18	That'll do it!		KillEffect																x		x															
+Zidane		Kill 19	Plus one for me!		KillEffect																x		x		x													
+Zidane		Kill 21	Wiped out!		KillEffect																x		x															
+Zidane		Kill 22	I just keep winning!		KillEffect																x		x															
+Zidane		Kill 23	Say your prayers!		KillEffect																x		x															
+Zidane		Kill 24	Bring it on!		KillEffect																x		x															
+Zidane		Kill 25	Watch and weep!		KillEffect																x		x															
+Zidane:Blind		Kill Blind 1	I can see right through you!		KillEffect																x		x															
+Zidane:Blind		Kill Blind 2	Nothin' can stop me!		KillEffect																x		x															
+Zidane:Blind		Kill Blind 3	I did it with my eyes closed.		KillEffect																x		x															
+Zidane		Low Hp 1	I need a new strategy.		Added					LowHP																												
+Zidane		Low Hp 2	Whew.. I'm out of practice.		Added					LowHP											x																	
+Zidane		Low HP 3	Just... gimme a sec.		Added					LowHP																												
+Zidane		Low HP 4	It's really gonna be like this, huh?		Added					LowHP																												
+Zidane		Low HP 5	Not bad..		Added					LowHP																												
+Zidane		Low HP 6	Didn't expect that..		Added					LowHP																												
+Zidane		Low HP 7	You're a little stronger than I thought..		Added					LowHP																												
+Zidane		Low HP 8	Okay, I see you..		Added					LowHP																												
+Zidane		Low HP 9	Not so bad after all..		Added					LowHP																												
+Zidane		Low HP 10	Could'a done without that..		Added					LowHP																												
+Zidane		Lucky Seven 1	Daddy needs a new pair of shoes.		CommandPerform							LuckySeven																										
+Zidane		Lucky Seven 2	C'mon win big, win big.		CommandPerform							LuckySeven																										
+Zidane		Lucky Seven 3	Go hard or go home.		CommandPerform							LuckySeven																										
+Zidane		Lucky Seven 4	Here comes the Luck of the draw.		CommandPerform							LuckySeven																										
+Zidane		Lucky Seven 5	Not my favourite number, but let's go!		CommandPerform							LuckySeven																										
+Zidane		Lucky Seven 6	Come home, come home , come home.		CommandPerform							LuckySeven																										
+Zidane		Lucky Seven 7	Wait, one more pull. I feel it this time.		CommandPerform							LuckySeven																										
+Zidane		Lucky Seven 8	Woo, let's go.		CommandPerform							LuckySeven																										
+Zidane		Lucky Seven 9	C'mon, let's win.		CommandPerform							LuckySeven																										
+Zidane		Lucky Seven 10	Give it, give it!		CommandPerform							LuckySeven																										
+Zidane		Medeo 1	Time has come, crash down on the wicked. Medeo!		CommandPerform							Medeo																										
+Zidane		Medeo 2	I bring you despair, ruination to all. Medeo!		CommandPerform							Medeo																										
+Zidane		Miss 1	Ha, scared ya!		MissEffect, DodgeEffect																x				x													
+Zidane		Miss 2	I'll get you next time.		MissEffect, DodgeEffect																x		x		x													
+Zidane		Miss 3			MissEffect, DodgeEffect																x		x		x													
+Zidane		Miss 4	Aww, you scared of me?		MissEffect, DodgeEffect																x				x													
+Zidane		Miss 6	Ah c'mon.		MissEffect, DodgeEffect																x		x		x													
+Zidane		Miss 7	I did that on purpose.		MissEffect, DodgeEffect																x				x													
+Zidane		Miss 8	Ah dammit.		MissEffect, DodgeEffect																x		x		x													
+Zidane		Miss 9	Oh, right, right.		MissEffect, DodgeEffect																x				x													
+Zidane		Miss 10			MissEffect, DodgeEffect																x		x		x													
+Zidane		Revived 1	Okay, I'm up, I'm up.		Removed					Death				3700																								
+Zidane		Revived 2	And he got tagged back in.		Removed					Death																												
+Zidane		Revived 3	Guess you guys need me after all.		Removed					Death																												
+Zidane		Revived 4	You need the MVP.		Removed					Death																												
+Zidane		Revived 5	Thanks, needed that one.		Removed					Death																												
+Zidane		Revived 6	*Yawn*, that was a good dream, too.		Removed					Death																												
+Zidane		Revived 7	Can't keep doing that..		Removed					Death																												
+Zidane		Sacrifice 1	Hey guys, leaving it all up to you.		CommandPerform							Sacrifice																										
+Zidane		Sacrifice 2	Don't you dare squander this.		CommandPerform							Sacrifice																										
+Zidane		Sacrifice 3	Here it is, my big hero moment.		CommandPerform							Sacrifice																										
+Zidane		Sacrifice 4	Guys, it's on you.		CommandPerform							Sacrifice																										
+Zidane		Sacrifice 5	Don't forget my great sacrifice, got it?		CommandPerform							Sacrifice																										
+Zidane		Sacrifice 6	Alright, you know what to do.		CommandPerform							Sacrifice																										
+Zidane		Sacrifice 7	Here, I trust you.		CommandPerform							Sacrifice																										
+Zidane		Soul Blade 1	This is gonna sting.		CommandPerform							SoulBlade																										
+Zidane		Soul Blade 2	Bit by bit, buddy.		CommandPerform							SoulBlade																										
+Zidane		Soul Blade 3	This is gonna hurt.		CommandPerform							SoulBlade																										
+Zidane		Soul Blade 4	This is what happens when you tick me off.		CommandPerform							SoulBlade																										
+Zidane		Soul Blade 5	Your not gonna like this one.		CommandPerform							SoulBlade																										
+Zidane		Steal 1	Yoink!		StealSuccess																																	
+Zidane		Steal 2	Sucker!		StealSuccess																																	
+Zidane		Steal 3	Mine now!		StealSuccess																																	
+Zidane		Steal 4	Don't mind if I do!		StealSuccess																																	
+Zidane		Steal 5	Can't help myself.		StealSuccess																																	
+Zidane		Steal 6	Easy mark!		StealSuccess																																	
+Zidane		Steal 7	Appreciate the donation.		StealSuccess																																	
+Zidane		Steal 8	Ohh, nice.		StealSuccess																																	
+Zidane		Steal 9	For me? You shouldn't have.		StealSuccess																																	
+Zidane		Steal 10	Thaaank you.		StealSuccess																																	
+Zidane		Steal 11	I'll take that.		StealSuccess																																	
+Zidane		Steal Empty 1	Nada.		StealEmpty																																	
+Zidane		Steal Empty 2	Nothing left? Yikes...		StealEmpty																																	
+Zidane		Steal Empty 3	Empty..		StealEmpty																																	
+Zidane		Steal Fail 1	Thought I had it that time..		StealFail																																	
+Zidane		Steal Fail 2	It's only a matter of time.		StealFail																																	
+Zidane		Steal Fail 3	Ahh, must've dropped it.		StealFail																																	
+Zidane		Steal Fail 4	What are you hiding in there?		StealFail																																	
+Zidane		Steal Fail 5	I'll get it, you'll see.		StealFail																																	
+Zidane		Steal Fail 6	Did I just get poorer?		StealFail																																	
+Zidane		Steal Fail 7			StealFail																																	
+Zidane		Tidal Flame 1	Burn it up!		CommandPerform							TidalFlame																										
+Zidane		Tidal Flame 2	This will sting!		CommandPerform							TidalFlame																										
+Zidane		Tidal Flame 3	Hope you like it hot!		CommandPerform							TidalFlame																										
+Zidane		Tidal Flame 4	Burn to a crisp!		CommandPerform							TidalFlame																										
+Zidane		Tidal Flame 5	You're on fire!		CommandPerform							TidalFlame																										
+Zidane		Trouble 1	You kiss your Mother with that face?		CommandPerform							Annoy																										
+Zidane		Trouble 2	Even your Mom can't stand that face.		CommandPerform							Annoy																										
+Zidane		Trouble 3	You know you're the weakest one here, right?		CommandPerform							Annoy																										
+Zidane		Trouble 4	Buddy, you're barely as threat.		CommandPerform							Annoy																										
+Zidane		Trouble 5	If I stole from you, I'd lose money!		CommandPerform							Annoy																										
+Zidane		Trouble 6	Don't quit your day job.		CommandPerform							Annoy																										
+Zidane		Victory 1	Piece of cake.		VictoryPose																														x			
+Zidane		Victory 2	Oh, is that it?		VictoryPose																														x			
+Zidane		Victory 3	Better luck next time.		VictoryPose																														x			
+Zidane		Victory 4	Didn't even break a sweat.		VictoryPose																														x			
+Zidane		Victory 5	Oh, is it over already?		VictoryPose																														x			
+Zidane		Victory 6	I rate that fight a... 3.		VictoryPose																														x			
+Zidane		Victory 7	Not bad, but I'm still better.		VictoryPose																														x			
+!Zidane	$!Steiner:LowHP	Victory 8	Ohh so close, you nearly had Steiner.		VictoryPose		1000																												x			
+Zidane		Victory 9	That all of them? Already?		VictoryPose																														x			
+Zidane		Victory 10	That wasn't even a warmup.		VictoryPose																														x			
+Zidane		Victory 11	Aww, I was having fun.		VictoryPose																														x			
+Zidane		Victory 12	Phew, Time flies when you're having fun.		VictoryPose																														x			
+Zidane		Victory 13	It's not like we can lose with me around.		VictoryPose																														x			
+Zidane		Victory 14	That was fun, we should do it again.		VictoryPose																														x			
+Zidane		Victory 15	*Yawns* hopefully the next ones will be a little stronger.		VictoryPose																														x			
+Zidane		Victory 16	Jeez, Cinna's hit me harder than that.		VictoryPose																														x			
+Zidane		Victory 17	Aww, you really tried, didn't you?		VictoryPose																														x			
+Zidane		Victory 18	Can't say we didn't warn you.		VictoryPose																														x			
+Zidane		Victory 19	Just like we practised.		VictoryPose																														x			
+Zidane		Victory 20	A wins, a win.		VictoryPose																														x			
+Zidane		Victory 21	So, what's next?		VictoryPose																														x			
+Zidane		What Is That 1	Hey, behind you!		CommandPerform							WhatIsThat																										
+Zidane		What Is That 2	What's that, over there!		CommandPerform							WhatIsThat																										
+Zidane		What Is That 3	Is that your Mother behind you?		CommandPerform							WhatIsThat																										
+Zidane		What Is That 4	Hey look, your food's here.		CommandPerform							WhatIsThat																										
+$Zidane	21:450	Heal+1st Black Waltz 1	What's wrong? Hahahah!		Healed																	x	x		x													
+Zidane		Steal+Sealion 1	Why does this thing has a dagger?		StealSuccess	100					MythrilDagger																											
+21:450	 	21/Ice 1	Feel the cold embrace.		CommandPerform		-100					5																										
+21:450		21/Fire 1	Burn! BURN!		CommandPerform		-100					6																										
+Steiner		Attack 1			HitEffect			Attack																														
+Steiner		Attack 2			HitEffect			Attack																														
+Steiner		Attack 3			HitEffect			Attack																														
+Steiner		Attack 4			HitEffect			Attack																														
+Steiner		Attack 5			HitEffect			Attack																														
+Steiner		Damage 1			Damaged																																	
+Steiner		Damage 2			Damaged																																	
+Steiner		Damage 3			Damaged																																	
+Steiner		Damage 4			Damaged																																	
+Steiner		Damage 5			Damaged																																	
+Steiner		Damage 6			Damaged																																	
+Steiner		Death 1	Prin...cess.		Added					Death																												
+Steiner		Death 2	This is.. impossible.		Added					Death																												
+Steiner		Death 3	This.. cannot.. be.		Added					Death																												
+Steiner		Death 4	I refuse to give up..		Added					Death																												
+Steiner		Death 5	I'lll, get you.. for that.		Added					Death											x																	
+Steiner		Steiner/Defend+Zidane 1_A	You are no match for my armor.	Steiner/Defend+Zidane 1_B	CommandPerform		200					Defend					x																				x	
+!Zidane		Steiner/Defend+Zidane 1_B	Can't break what's already broken.	Steiner/Defend+Zidane 1_C	Chain												x																					
+Steiner		Steiner/Defend+Zidane 1_C	I heard that, monkey!		Chain												x																					
+Steiner		Defend 1	My defense is impenetrable!		CommandPerform							Defend																										
+Steiner		Defend 2	I shall not lose to the likes of you!		CommandPerform							Defend																										
+Steiner		Defend 3	Hurt me if you can.		CommandPerform							Defend																										
+Steiner		Defend 4	You shall never hurt me.		CommandPerform							Defend																										
+Steiner		Healed Ally 1	You are too kind.		Healed																x																	
+Steiner		Healed Garnet 1	Thank you princess.		Healed				Garnet												x																	
+Steiner		Healed Vivi 1	Thank you master Vivi.		Healed				Vivi												x				x													
+Steiner		Healed Zidane 1	I don't need your help.		Healed	1			Zidane												x				x													
+Steiner	$Garnet	Intro+Garnet 1	You may NOT harm the Princess!		BattleStart												x																x	x	x			
+Steiner	$Garnet	Intro+Garnet 2	You dare attack the Princess!?		BattleStart												x																x	x	x			
+Steiner	$Garnet	Intro+Garnet 3	Princess! Please be careful!		BattleStart												x																	x	x			
+Steiner		Intro 1	How DARE you get in my way.		BattleStart																													x	x			x
+Steiner		Intro 2	Step aside!		BattleStart																													x	x			x
+Steiner		Intro 3	Do you wish to die???		BattleStart																												x	x	x			x
+Steiner		Intro Team 1	Fear not, I shall dispose of this!		BattleStart												x																	x	x			x
+Steiner		Kill 1	Away with you!		KillEffect																x		x															
+Steiner		Kill 2	Aha!		KillEffect																x		x															
+Steiner		Kill 3	Vile creature!		KillEffect																x		x															
+Steiner		Kill 4	Get out of my way!		KillEffect																x		x															
+Steiner		Kill 5	Is that all you have?		KillEffect																x		x															
+Steiner		Low HP 1	Tis.... but a...flesh wound.		Added					LowHP																												
+Steiner		Low HP 2	This.. is nothing!		Added					LowHP																												
+Steiner		Low HP 3	Is that all you!.. *cough*... all you got?		Added					LowHP													x															
+Steiner		Low HP 4	I just.. need a moment.		Added					LowHP																												
+!Vivi	Steiner	Steiner/Magic Sword 1_A	Steiner, the sword magic thingy!	Steiner/Magic Sword 1_B	CommandPerform			MagicSword									x																					
+Steiner		Steiner/Magic Sword 1_B	Great idea!		Chain												x																					
+!Vivi	Steiner	Steiner/Magic Sword 2	I hope this sword magic thingy works!	Steiner/Attack 4	CommandPerform			MagicSword									x																					
+!Vivi	Steiner	Steiner/Magic Sword 3_A	Will this sword magic stuff work?	Steiner/Magic Sword 3_B	CommandPerform			MagicSword									x																					
+Steiner		Steiner/Magic Sword 3_B	Of course!		Chain												x																					
+Steiner		Steiner/Magic Sword 4_A	Master Vivi, a little assistance?	Steiner/Magic Sword 4_B	CommandPerform			MagicSword									x																					
+!Vivi		Steiner/Magic Sword 4_B	We'll do the sword magic thingy!		Chain												x																					
+Steiner		Magic Sword 5	Try avoiding this!		CommandPerform			MagicSword																														
+Steiner		Miss 1	Oh dammit.		MissEffect																x		x															
+Steiner		Miss 2	I'll get you for that!		MissEffect																x		x															
+Steiner		Miss 3	How dare you avoid me!		DodgeEffect																x		x															
+Steiner		Miss 4	Blast it!		MissEffect																x		x															
+Steiner		Miss 5	Grrrr! Useless good for nothing!		MissEffect																x		x															
+Steiner		Miss 6	I will have your head for that!		DodgeEffect																x		x															
+Steiner		Miss 7	You'll regret that.		DodgeEffect																x		x															
+Steiner:Blind		Miss Blind 1	I WILL find you!		MissEffect, DodgeEffect	1															x		x															
+Steiner:Blind		Miss Blind 2	I've had enough of this!		MissEffect, DodgeEffect	1															x		x															
+Steiner:Blind		Miss Blind 3	Oh for the love of...		MissEffect, DodgeEffect	1															x		x															
+Steiner:Blind		Miss Blind 4	Blast this stupid thing.		MissEffect, DodgeEffect	1															x		x															
+Steiner:Blind		Miss Blind 5	I will beat your stupid tricks!		MissEffect, DodgeEffect	1															x		x															
+Steiner		Potion Garnet 1	Here princess. Please, stay back.		CommandPerform		400	Item	Garnet								x				x	x			x													
+Steiner		Potion Garnet 2	It is alright princess, I'm here for you.		CommandPerform		400	Item	Garnet								x				x	x			x													
+Steiner		Potion Garnet 3	I will assist you princess!		CommandPerform		400	Item	Garnet								x				x	x			x													
+Steiner		Potion Self 1	You must do better than that.		CommandPerform			Item														x	x		x													
+Steiner		Potion Self 2	I will not lose.		CommandPerform			Item														x	x		x													
+Steiner		Potion Self 3	Ah! You cannot hurt me.		CommandPerform			Item														x	x		x													
+Steiner		Potion Self 4	Whew... That's better.		Healed			Item														x	x		x													
+Steiner		Potion Vivi 1	Master Vivi, please take care!		CommandPerform			Item	Vivi												x	x			x													
+Steiner		Potion Vivi 2	You must take care of yourself master Vivi.		CommandPerform			Item	Vivi												x	x			x													
+Steiner		Potion Vivi 3	Do not fear master Vivi!		CommandPerform			Item	Vivi												x	x			x													
+Steiner		Potion Zidane 1	This is NOT for your sake.		CommandPerform			Item	Zidane												x	x			x													
+Steiner		Potion Zidane 2	Don't think for a second that this changes things.		CommandPerform			Item	Zidane												x	x			x													
+Steiner	!Garnet	Steiner/Potion Zidane 3_A	If it were up to me I'll let you die...	Steiner/Potion Zidane 3_B	CommandPerform			Item	Zidane												x	x			x													
+!Garnet		Steiner/Potion Zidane 3_B	STEINER!	Steiner/Potion Zidane 3_C	Chain																																	
+Steiner		Steiner/Potion Zidane 3_C	Yes Ma'am.		Chain																																	
+Steiner		Revived 1	Huh? What happened?		Removed					Death																												
+Steiner		Revived 2			Removed					Death																												
+Steiner		Revived 3	I am fine, do not worry.		Removed					Death																												
+Steiner		Revived 4	You thought you beat me? Ha!		Removed					Death																												
+Steiner		Sword Art 1	You're looking a little injured.		CommandPerform			SwordAct																														
+Steiner		Sword Art 2	Now I've got you!		CommandPerform			SwordAct																														
+Steiner		Sword Art 3	Time to strike!		CommandPerform			SwordAct																														
+Steiner		Sword Art 4	This will end you!		CommandPerform			SwordAct																														
+Steiner		Sword Art 5	You'll regret fighting me!		CommandPerform			SwordAct																														
+Steiner		Sword Art 6	For Alexandria!		CommandPerform			SwordAct																														
+Steiner		Trance 1	You shall not take another step.		TranceEnter																																	
+Steiner		Trance 2	I will vanquish you!		TranceEnter																																	
+Steiner		Trance 3	Do not underestimate me!		TranceEnter																																	
+Steiner		Trance 4	This ends here!		TranceEnter																																	
+Steiner		Trance 5	I must protect the Princess.		TranceEnter																																	
+Steiner		Trance 6	For the honor of Alexandria's knights of Pluto!		TranceEnter																																	
+!Steiner	$!Garnet:LowHP	Victory+Garnet 1	Princess! Are you alright?		VictoryPose		1000										x																		x			
+Steiner		Victory 1	That better be the last of them.		VictoryPose																														x			
+Steiner		Victory 2	That'll teach them some manners.		VictoryPose																														x			
+Steiner		Victory Team 1	We must keep moving!		VictoryPose												x																		x			
+Steiner		Victory Team 2	Why must we have to keep doing this!		VictoryPose												x																		x			
+:298		Steiner/Attack 1			HitEffect																																	
+:298		Steiner/Attack 2			HitEffect																																	
+:298		Steiner/Attack 3			HitEffect																																	
+:298		Steiner/Attack 4			HitEffect																																	
+:298		Steiner/Attack 5			HitEffect																																	
+:298		Steiner/Damage 1			Damaged																																	
+:298		Steiner/Damage 2			Damaged																																	
+:298		Steiner/Damage 3			Damaged																																	
+:298		Steiner/Damage 4			Damaged																																	
+:298		Steiner/Damage 5			Damaged																																	
+:298		Steiner/Kill 1	Away with you!		KillEffect																																	
+:298		Steiner/Kill 2	Aha!		KillEffect																																	
+:298		Steiner/Kill 4	Get out of my way!		KillEffect																																	
+:298		Steiner/Miss 1	Oh dammit.		MissEffect, DodgeEffect																																	
+:298		Steiner/Miss 3	How dare you avoid me!		MissEffect, DodgeEffect																																	
+:298		Steiner/Miss 4	Blast it!		MissEffect, DodgeEffect																																	
+:298		Steiner/Robbed 1	Hey! Give that back!		Ability							Steal																										
+:298		Steiner/Robbed 2	What do you think you're doing?		Ability	1					NoItem	Steal																										
+:298		Steiner/Robbed 3	You disgusting thief!		Ability	1					NoItem	Steal																										
+:298		Steiner/Robbed 4	That's mine!		Ability							Steal																										
+:298		Steiner/Robbed 5	How dare you!		Ability	1					NoItem	Steal																										
+Vivi		Attack 1			HitEffect			Attack																														
+Vivi		Attack 2			HitEffect			Attack																														
+Vivi		Attack 3	Bonk!		HitEffect			Attack															x														x	
+Vivi		Attack 4			HitEffect			Attack																														
+Vivi		Attack 5			HitEffect			Attack																														
+Vivi		Blizzard 1	Blizzard!		CommandPerform							Blizzard, Blizzara, Blizzaga																										
+Vivi		Blizzard Scared 1	Uh.. I - I'll use my ice magic.		CommandPerform							Blizzard, Blizzara, Blizzaga																										
+Vivi		Blizzard Scared 2	I'm sorry this will be cold.		CommandPerform							Blizzard, Blizzara, Blizzaga																										
+Vivi		Change Back 1	This is better.		ChangeBack																																	
+Vivi		Change Front 1	Maybe here.		ChangeFront																																	
+Vivi		Damage 1			Damaged																																	
+Vivi		Damage 2			Damaged																																	
+Vivi		Damage 3			Damaged																																	
+Vivi		Damage 4			Damaged																																	
+Vivi		Death 1	Oh no...		Added					Death																												
+Vivi		Death 2	Oh no...		Added					Death																												
+Vivi		Death 3			Added					Death																												
+Vivi		Ejected			Ability		0																															
+Vivi		Fire 1	Fire.		CommandPerform							Fire, Fira, Firaga																										
+Vivi		Fire 2	Fire.		CommandPerform							Fire, Fira, Firaga																										
+Vivi		Fire Scared 1	Okay.. Fire.		CommandPerform							Fire, Fira, Firaga																										
+Vivi		Fire Scared 2	Hum.. I'll cast fire.		CommandPerform							Fire, Fira, Firaga																										
+Vivi		Fire Scared 3	I got to burn you, sorry.		CommandPerform							Fire, Fira, Firaga																										
+Vivi		Focus 1	Focus.		CommandPerform							Focus																										
+Vivi		Focus 2	Focus.		CommandPerform							Focus																										
+Vivi		Focus 3	Hmmmmmmmm!!!		CommandPerform							Focus																										
+Vivi		Focus Scared 1	Okay Vivi, you can do it. Focus.		CommandPerform							Focus																										
+Vivi		Healed 1			Healed																				x													
+Vivi		Healed 2	Much better!		Healed																				x													
+Vivi		Healed Ally 1	Thanks!		Healed																x																	
+Vivi		Intro 1	Here we go!		BattleStart																													x	x			x
+Vivi		Potion 1	Here you are!		CommandPerform			Item																														
+Vivi		Potion 2	Oh you have an owie, here you are!		CommandPerform			Item			Potion, HiPotion, PhoenixDown, PhoenixPinion																											
+Vivi		Potion 3	I - I'll try to help you.		CommandPerform			Item																														
+Vivi		Revived 1	Okay I'm up!		Removed					Death																												
+Vivi		Revived 2	Ah uh... Im up, I'm up!		Removed					Death																												
+Vivi		Revived 3	Oh.. I - I'll try again.		Removed					Death																												
+Vivi		Trance 1	I got to believe in myself!		TranceEnter																																	
+Vivi		Trance 2	I will do my best!		TranceEnter																																	
+Vivi		Victory 1	We did it!		VictoryPose																														x			
+Vivi		Victory 2	Yipee!		VictoryPose																														x			
+Vivi		Victory 3	Woohoo!		VictoryPose																														x			
+Vivi		Victory 4	Now I want some ice cream!		VictoryPose																														x			
+!Vivi:LowHP		Victory Low HP 1	That was close...		VictoryPose		1000																												x			
+!Vivi		Intro 3rd Black Waltz 1	You scumbag! They weren't worthless!		BattleStart	1000	-100						296																									
+Vivi		Trance 3rd Black Waltz 1	I'm. Not. Worthless!		TranceEnter		-100						296																									
+Vivi		Fire 3rd Black Waltz 1	Incinerate...		CommandPerform		200					Fire, Fira, Firaga	296																									
+Vivi		Fire 3rd Black Waltz 2	Burn...		CommandPerform		200					Fire, Fira, Firaga	296																									
+Vivi		Ice 3rd Black Waltz 1	Shatter...		CommandPerform		200					Blizzard, Blizzara, Blizzaga	296																									
+Vivi		Ice 3rd Black Waltz 2	Freeze...		CommandPerform		200					Blizzard, Blizzara, Blizzaga	296																									
+Vivi		Thunder 3rd Black Waltz 1	Vaporize...		CommandPerform		200					Thunder, Thundara, Thundaga	296																									
+Vivi		Thunder 3rd Black Waltz 2	Become dust...		CommandPerform		200					Thunder, Thundara, Thundaga	296																									
+Vivi		Magic 3rd Black Waltz 1	I'll end you...		CommandPerform			BlackMagic, DoubleBlackMagic					296																									
+Vivi		Magic 3rd Black Waltz 2	Taste your own medicine...		CommandPerform			BlackMagic, DoubleBlackMagic					296																									
+Vivi		Magic 3rd Black Waltz 3	See how you like it...		CommandPerform			BlackMagic, DoubleBlackMagic					296																									
+Vivi		Magic 3rd Black Waltz 4	This will hurt...		CommandPerform			BlackMagic, DoubleBlackMagic					296																									
+Garnet		Attack 1			HitEffect			Attack																														
+Garnet		Attack 2			HitEffect			Attack																														
+Garnet		Attack 3			HitEffect			Attack																														
+Garnet		Attack 4			HitEffect			Attack																														
+Garnet		Attack 5			HitEffect			Attack																														
+$!:	!Garnet:Blind	Garnet/Attack Blind 1	So that's where you've been.		Damaged			Attack	Garnet																x		x	x										
+Garnet		Cure Steiner 1	On your feet Steiner!		CommandPerform			WhiteMagicGarnet, Item	Steiner		Potion, HiPotion, PhoenixDown, PhoenixPinion	Void, Cure, Cura, Curaga, Life, FullLife										x	x		x													
+Garnet		Cure Steiner 2	You can't protect me if you're on the ground now, can you?		CommandPerform			WhiteMagicGarnet, Item	Steiner		Potion, HiPotion, PhoenixDown, PhoenixPinion	Void, Cure, Cura, Curaga, Life, FullLife									x	x			x													
+Garnet		Cure Vivi 1	Don't worry Vivi, it will be okay.		CommandPerform			WhiteMagicGarnet, Item	Vivi			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna, Life, FullLife									x	x			x													
+Garnet		Cure Vivi 2	Do not lose hope now.		CommandPerform			WhiteMagicGarnet, Item	Vivi			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna, Life, FullLife									x	x			x													
+Garnet		Cure Vivi 3	Don't be discouraged.		CommandPerform			WhiteMagicGarnet, Item	Vivi			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna, Life, FullLife									x	x			x													
+Garnet		Cure Zidane 1	Where would you be without me?		CommandPerform			WhiteMagicGarnet, Item	Zidane			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna, Life, FullLife									x	x			x													
+Garnet		Cure Zidane 2	I thought you could do better than that.		CommandPerform			WhiteMagicGarnet, Item	Zidane		Potion, HiPotion, PhoenixDown, PhoenixPinion	Void, Cure, Cura, Curaga, Panacea, Stona, Esuna, Life, FullLife									x	x			x													
+Garnet		Cure Zidane 3	Doing okay there Zidane?		CommandPerform			WhiteMagicGarnet, Item	Zidane			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna, Life, FullLife									x	x			x													
+Garnet		Damage 1			Damaged																																	
+Garnet		Damage 2			Damaged																																	
+Garnet		Damage 3			Damaged																																	
+Garnet		Damage 4			Damaged																																	
+Garnet		Damage 5			Damaged																																	
+Garnet		Damage 6			Damaged																																	
+Garnet		Death 1	I mustn't...		Added					Death																												
+Garnet		Death 2	I can't...		Added					Death																												
+Garnet		Death 3	Not.. now...		Added					Death																												
+Garnet		Death 4	It... can't...		Added					Death																												
+Garnet		Death 5	I've... failed...		Added					Death													x															
+Garnet		Death 6	I'm... sorry...		Added					Death													x															
+Garnet		Death 7	No...		Added					Death																												
+Garnet		Death 8	Why...		Added					Death																												
+Garnet		Death 9	This.. can't.. be.		Added					Death																												
+Garnet		Death 10	I.. refuse...		Added					Death																												
+Garnet		Death 11	Not like this...		Added					Death																												
+Garnet		Death 12	I wont...		Added					Death																												
+Garnet		Death 13	I must.. get stonger.		Added					Death													x															
+Garnet		Death 14			Added					Death																												
+!Zidane	Garnet	Garnet/Dodge+Zidane 1_A	Ooh! Nice moves!	Garnet/Dodge+Zidane 1_B	Dodged																																	
+Garnet		Garnet/Dodge+Zidane 1_B	I did practice to escape the castle after all.		Chain																																	
+Garnet		Dodge 1			Dodged																																	
+Garnet		Dodge 2	That was close.		Dodged, Missed																				x													
+Garnet		Heal 1	I shan't give up!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 2	We can win this!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 3	Stand up team!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 4	We are not done yet!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 5	This isn't over!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 9	Keep fighting, team!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 10	Stand tall, everyone!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 11	You will not hurt my friends!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 12	Together, we are strong!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 13	You can not defeat us!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 14	I will protect everyone!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 15	I'll keep us safe!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 16	Can't take us down!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 17	Thought you had us? Think again!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 18	We can't fail!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 19	Everyone, trust in me.		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal 20	Focus on fighting, I've got this!		CommandPerform			WhiteMagicGarnet													x	x		x														
+Garnet		Heal Self 1	Just a little top up.		CommandPerform			WhiteMagicGarnet, Item			Potion, HiPotion	Void, Cure, Cura, Curaga										x	x		x													
+Garnet		Heal Self 2	I'll be fine, don't worry.		CommandPerform			WhiteMagicGarnet, Item				Void, Cure, Cura, Curaga, Panacea, Esuna										x	x		x													
+Garnet		Heal Self 3	You cannot hurt me.		CommandPerform			WhiteMagicGarnet, Item			Potion, HiPotion	Void, Cure, Cura, Curaga										x	x		x													
+Garnet		Heal Self 4	Oh, thank you Dagger.		CommandPerform			WhiteMagicGarnet, Item				Void, Cure, Cura, Curaga, Panacea, Esuna										x	x		x													
+Garnet		Heal Self 8	Nice try, but I'm better.		CommandPerform			WhiteMagicGarnet, Item				Void, Cure, Cura, Curaga, Panacea, Esuna		2540																								
+Garnet		Heal Self 9	You can't hurt me!		CommandPerform			WhiteMagicGarnet, Item			Potion, HiPotion	Void, Cure, Cura, Curaga		2540																								
+Garnet		Heal Self 10	I won't go down that easy!		CommandPerform			WhiteMagicGarnet, Item				Void, Cure, Cura, Curaga, Panacea, Esuna		2540																								
+Garnet		Heal Self 11	I'll be fine, don't worry!		CommandPerform			WhiteMagicGarnet, Item				Void, Cure, Cura, Curaga, Panacea, Esuna		2540																								
+Garnet		Heal Self 13	This is nothing!		CommandPerform			WhiteMagicGarnet, Item				Void, Cure, Cura, Curaga, Panacea, Esuna		2540																								
+Garnet		Heal Self 14	An easy fix!		CommandPerform			WhiteMagicGarnet, Item				Void, Cure, Cura, Curaga, Panacea, Esuna		2540																								
+Garnet		Heal Self 15	Thought you had me, didn't you?		CommandPerform			WhiteMagicGarnet, Item				Void, Cure, Cura, Curaga, Panacea, Esuna		2540																								
+Garnet		Sleepy 1	Can't seem to keep my eyes open.		Added					Sleep																												
+Garnet		Sleepy 2			Added					Sleep																												
+Garnet		Sleepy 3	So tired...		Added					Sleep																												
+Garnet		Healed 1	Whew.		Healed																x	x																
+Garnet		Healed 2	You have my gratitude.		Healed																x	x																
+Garnet		Healed 3	Thank you!		Healed																x	x																
+Garnet		Healed 4	That's better!		Healed																x	x																
+Garnet		Healed 5	Aaah! Thank you.		Healed																x	x																
+Garnet		Healed 6	You have my thanks.		Healed																x	x																
+Garnet		Healed 7	You have my gratitude.		Healed																x	x																
+Garnet		Intro 1	Please, let us pass.		BattleStart																												x					x
+Garnet		Intro 2	Everyone, please take care!		BattleStart																												x					x
+Garnet		Intro 3	We can do this, together.		BattleStart																												x					x
+Garnet		Intro 4	We must remain calm.		BattleStart																												x					x
+Garnet		Intro 5	This isn't good.		BattleStart																											x	x					x
+Garnet		Kill 1	I am sorry but I must.		KillEffect																x		x															
+Garnet		Kill 2	Please forgive me.		KillEffect																x																	
+Garnet		Kill 3	I don't blame you...		KillEffect																x		x															
+Garnet		Kill 4	Please.. rest		KillEffect																x																	
+Garnet:Blind		Kill Blind 1	Found you!		KillEffect																x		x		x													
+Garnet:Blind		Kill Blind 2	Finally...		KillEffect																x		x															
+Garnet:Blind		Kill Blind 3	No more hiding!		KillEffect																x		x															
+Garnet		Low HP 1	I am okay, do not worry.		Added					LowHP																												
+Garnet		Low HP 2	I must persevere.		Added					LowHP																												
+Garnet		Low HP 3	This shall not stop me.		Added					LowHP																												
+Garnet		Low HP 4	Must, continue...		Added					LowHP																												
+Garnet		Low HP 5	Do not fret, I'm fine.		Added					LowHP																												
+Garnet		Low HP 9	I just need a minute...		Added					LowHP				2540																								
+Garnet		Low HP 10	Nothing I can't fix...		Added					LowHP				2540																								
+Garnet		Low HP 11	I can't give up...		Added					LowHP				2540																								
+Garnet		Low HP 12	This is nothing...		Added					LowHP				2540																								
+Garnet		Low HP 13	I'm fine.. don't worry.		Added					LowHP				2540																								
+Garnet		Low HP 14	Not good...		Added					LowHP				2540																								
+Garnet		Low HP 15	Don't count me out.		Added					LowHP				2540																								
+Garnet		Low HP 16	I am not afraid.		Added					LowHP				2540																								
+Garnet		Low HP 17	This wont stop me.		Added					LowHP				2540																								
+Garnet		Low HP 18	Easy fix..		Added					LowHP				2540																								
+Garnet		Low HP 19	Not a problem..		Added					LowHP				2540																								
+Garnet		Low HP 20	A mild inconvenience..		Added					LowHP				2540																								
+Garnet		Low HP 21	I'm not done yet.		Added					LowHP				2540																								
+Garnet		Low HP 23	Not yet...		Added					LowHP				2540																								
+Garnet		Low HP 24	I can do this.		Added					LowHP				2540																								
+Garnet		Low HP 25	Not a bad shot..		Added					LowHP				2540																								
+Garnet		Low HP 26	Sure.. target the healer..		Added					LowHP				2540																								
+Garnet		Low HP 28	How.. dare you..		Added					LowHP				2540																								
+Garnet		Miss 1	How dare you!		DodgeEffect, MissEffect																x		x		x													
+Garnet		Miss 2	I order you to stand still!		DodgeEffect, MissEffect																x		x		x													
+Garnet		Miss 3	How rude!		DodgeEffect, MissEffect																x		x		x													
+Garnet		Miss 4	No manners at all.		DodgeEffect, MissEffect																x		x		x													
+Garnet		Miss 8	Seriously?		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet		Miss 9	That isn't funny!		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet		Miss 10	Stand still!		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet		Miss 11	How embarrassing..		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet		Miss 12	Need to work on my aim..		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet		Miss 13	Let's not do that again..		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet		Miss 14	How inconvenient		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet		Miss 15	Typical..		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet:Blind		Miss Blind 3	I really should do something about this.		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet:Blind		Miss Blind 4	Why do I even bother?		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet:Blind		Miss Blind 5	This is so annoying.		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet:Blind		Miss Blind 6	Ahh! I can't see!		DodgeEffect, MissEffect									2540							x		x		x													
+Garnet		Trance 1	I will protect everyone!		TranceEnter																																	
+Garnet		Trance 2	I will not let you do this!		TranceEnter																																	
+Garnet		Trance 3	No! No more!		TranceEnter																																	
+Garnet		Trance 4	I will allow this no more!		TranceEnter																																	
+Garnet		Trance 5	I will not allow this to go on!		TranceEnter																																	
+Garnet		Victory 1	Be careful, there may be more.		VictoryPose												x																		x			
+Garnet		Victory 2	Seems we make quite the team.		VictoryPose												x																		x			
+Garnet		Victory 3	Is everyone okay?		VictoryPose												x																		x			
+Garnet		Victory 4	Please, forgive me.		VictoryPose																														x			
+!Garnet		Intro 2nd Black Waltz 1	Leave us at once!		BattleStart	1000	-100						294																									
+!Garnet		Intro 2nd Black Waltz 2	Why are you here? Tell me!		BattleStart	1000	-100						294																									
+!Garnet		Intro 2nd Black Waltz 3	You will NOT take me back to the castle.		BattleStart	1000	-100						294																									
+Marcus		Attack 1			HitEffect			Attack																					x									
+Marcus		Attack 2			HitEffect			Attack																					x									
+Marcus		Attack 3			HitEffect			Attack																					x									
+Marcus		Attack 4	Watch closely.		HitEffect			Attack													x		x				x	x	x									
+Marcus		Attack 5			HitEffect			Attack																					x									
+Marcus		Attack 6			HitEffect			Attack																					x									
+Marcus		Crit 1			HitEffect			Attack																		x	x	x										
+Marcus		Crit 2			HitEffect			Attack																		x	x	x										
+Marcus		Crit 3			HitEffect			Attack																		x	x	x										
+Marcus		Damage 1	You will pay for that.		Damaged																x		x		x	x	x	x										
+Marcus		Damage 2			Damaged																																	
+Marcus		Damage 3			Damaged																																	
+Marcus		Damage 4			Damaged																																	
+Marcus		Damage 5			Damaged																																	
+Marcus		Damage 6			Damaged																																	
+Marcus		Death 1	God.. dammit.		Added					Death																												
+Marcus		Dodge 1	Ha, as if.		Dodged, Missed																				x													
+Marcus		Intro 1	No holding back.		BattleStart																													x	x			
+Marcus		Kill 1	Got you right there!		KillEffect																x		x															
+Marcus		Kill 2	So weak.		KillEffect																x		x															
+Marcus		Kill 3	You're history.		KillEffect																x		x															
+Marcus		Kill 4	Meet your maker!		KillEffect																x		x															
+Marcus		Low HP 1	Don't push you luck.		Added					LowHP											x		x															
+Marcus		Poly 1	Bright light, shine down on bloody impurity! Poly!		CommandPerform							Poly																										
+Marcus		Poly 2	Bathe in the light! Poly!		CommandPerform							Poly																										
+Marcus		Potion 1	Focus buddy.		CommandPerform			Item													x	x			x													
+Marcus		Victory 1	Not too shabby.		VictoryPose																														x			
+Marcus		Victory 2	That's, that.		VictoryPose																														x			
+Cinna		Attack Ally 1	Duh, Sorry!		HitEffect			Attack													x	x			x													
+Cinna		Attack Ally 2	Maybe I should wear guh-lass-es.		HitEffect			Attack													x	x			x													
+Cinna		Attack Ally 3	I - uh.. meant to do that.		HitEffect			Attack													x	x			x													
+Cinna		Change Back 1	Give me a little space.		ChangeBack																																	
+Cinna		Change Back 2	I'll stand back here real quick.		ChangeBack																																	
+Cinna		Change Back 3	I'll go ahead and step back.		ChangeBack																																	
+Cinna		Change Front 1	Front row ticket baby!		ChangeFront																																	
+Cinna		Crit 1	The Hammer- Tolls?		HitEffect																					x	x	x										
+Cinna		Crit 2	Nail on the head!		HitEffect																					x	x	x										
+Cinna		Death 1	It.. was.. fun..		Added					Death																												
+Cinna		Death 2	Oh it was fun you guys.		Added					Death																												
+Cinna		Defend 1	Try and break through this.		CommandPerform			Defend																														
+Cinna		Defend 2	Ye ain't getting through.		CommandPerform			Defend																														
+Cinna		Dodge 1	You can't see me.		DodgeEffect																				x													
+Cinna		Game Over 1	It.. was.. fun you.. gu-.		GameOver, Defeated																																	
+Cinna		Game Over 2	Maybe you should've healed.		GameOver, Defeated																																	
+Cinna		Game Over 3	You can't teach a man to fish in someone else's shoes.		GameOver, Defeated																																	
+Cinna		Intro 1	You have my hammer, but not really.		BattleStart																													x	x			
+Cinna		intro 2	Fine, I'll help...		BattleStart																													x	x			
+Cinna		Intro 3	I mean you can do it without me I guess...		BattleStart																													x	x			
+Cinna		Kill 1	Your time is up, my time is now!		KillEffect																x		x															
+Cinna		Kill 2	Whew, about time!		KillEffect																x		x															
+Cinna		Kill 3	Eyy I got one!		KillEffect																x		x															
+Cinna		Low HP 1	Okay, okay! Stop hitting me.		Added					LowHP											x																	
+Cinna		Low HP 2	A little help!		Added					LowHP																												
+Cinna		Low HP 3	Hey, a little help over here.		Added					LowHP																												
+Cinna		Low HP 4	Ow that hurts.		Added					LowHP																												
+Cinna		Miss 1	Stand still would ya!		MissEffect																x		x															
+Cinna		Miss 2	Gimme a break..		MissEffect																x		x															
+Cinna		Miss 3	Oh boy..		MissEffect																x		x															
+Cinna		Miss 4	Ugh, you're the worst.		MissEffect																x		x															
+Cinna		Potion 1	Don't you die on me!		CommandPerform			Item													x	x																
+Cinna		Potion 2	You need to stay up.		CommandPerform			Item													x	x																
+Cinna		Potion 3	I can't do this alone.		CommandPerform			Item													x	x																
+Cinna		Potion Self 1	Ya can't spell win without I.		CommandPerform			Item														x	x															
+Cinna		Potion Self 2	Ya can't spell I without win... Wait...		CommandPerform			Item														x	x															
+Cinna		Potion Self 3	Ya can't spell win without I... Or Cinna.		CommandPerform			Item														x	x															
+Cinna		Revived 1	You're a life saver!		Removed					Death																												
+Cinna		Revived 2	I owe you one.		Removed					Death																												
+Cinna		Steal 1	I'll take that.		StealSuccess																																	
+Cinna		Steal 2	Thank you.		StealSuccess																																	
+Cinna		Steal 3	That's mine now.		StealSuccess																																	
+Cinna		Steal 4	I'm in ya pockets!		StealSuccess																																	
+Cinna		Steal 5	Hey I got something!		StealSuccess																																	
+Cinna		Steal Fail 1	Failure.		StealFail																																	
+Cinna		Steal Fail 2			StealFail																																	
+Cinna		Steal Nothing 1	He ain't got nothing.		StealEmpty																																	
+Cinna		Steal Nothing 2	I think we robbed him dry.		StealEmpty																																	
+Cinna		Victory 1	Ta-ta-la-taaaa.		VictoryPose																																	
+Cinna		Victory 2	We did it? I mean, WE DID IT!		VictoryPose																																	
+Cinna		Victory 3	I mean, was there ever any doubt?		VictoryPose																																	
+Cinna		Pyro 1	Destruction of nature gather in flame. Pyro!		CommandPerform							Pyro																										
+Cinna		Pyro 2	Out of the ground, raze all greenery with flame. Pyro!		CommandPerform							Pyro																										
+Cinna		Pyro 3	D'oh boss, I forgot my line.		CommandPerform							Pyro																										
+Cinna		Stage Death 1	What was ne- I am dead.		Added	1				Death			338																									
+Cinna		Stage Death 2	Good bye world... Heh.		Added	1				Death			338																									
+Cinna		Stage Death 3	I have.. fallen in battle.		Added	1				Death			338																									
+Cinna		Stage Death 4	I am dead.. now.		Added	1				Death			338																									
+Cinna		Stage Death 5	Fate is cru-uh-el.		Added	1				Death			338																									
+Blank		Attack 1			HitEffect			Attack																					x									
+Blank		Crit 1			HitEffect			Attack																		x	x	x										
+Blank		Damage 1			Damaged																																	
+Blank		Damage 2			Damaged																																	
+Blank		Damage 3			Damaged																																	
+Blank		Damage 4			Damaged																																	
+Blank		Healed 1	I'm fine...		Healed																x	x			x													
+Blank		Healed 2	I guess it can't be helped.		Healed																x	x			x													
+Blank		Intro 1	Yeah yeah, let's do it...		BattleStart																													x	x			
+Blank		Intro 2	You're gonna prove yourself, right?		BattleStart																													x	x			
+Blank		Kill 1	Next...		KillEffect																x		x															
+Blank		Low HP 1	Can we not..		Added					LowHP											x																	
+Blank		Miss 1			MissEffect																x	x			x													
+Blank		Pyro 1	Smoldering flames far below, punish the wicked, Pyro!		CommandPerform							Pyro																										
+Blank		Pyro 2	Star fire awaken and deliver your judgement,  Pyro!		CommandPerform							Pyro																										
+Blank		Revived 1	Don't count me out.		Removed					Death																												
+Blank		Revived 2	You won't stop me with that.		Removed					Death																												
+Blank		Reviving 1	You're gonna get up and try again, right?		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Blank		Reviving 2	Snap out of it.		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Blank		Reviving Zidane 1	And here I thought you were the leading man.		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Blank		Victory 1	Better luck next time.		VictoryPose																																	
+Blank		Victory 2	Is that it?		VictoryPose																																	
+Blank		Victory 3	I can't help but win, really.		VictoryPose																																	
+Blank		Victory 4	Losing wasn't in the plan.		VictoryPose																																	
+338:359		Baku/Poly 1	Heaven's wish to destroy all minds... Poly Explosion!		CommandPerform		-100					1																										
+338:359		Baku/Poly 2	Simmering life light, be a tower of power! Poly!		CommandPerform		-100					1																										
+338:359		Baku/Attack 3	$Taste steel!		CommandPerform		-100					0																										
+336:428		Baku/Attack 1	$Get some!		CommandPerform		-100					0																										
+336:428		Baku/Attack 2	$Gwahaha!		CommandPerform		-100					1																										
+295:301		Baku/Attack 4	$Rrrragh!		CommandPerform		0					0																										
+295:301		Baku/Attack 5	$Gwahaha!		CommandPerform		-100					1																										
+295:301		Baku/Attack 6	$Bring it on!		CommandPerform		-100					3																										
+295:301		Baku/Attack 7			HitEffect		-100					3																										
+Quina		Attack 1			HitEffect			Attack																					x									
+Quina		Attack 2			HitEffect			Attack																					x									
+Quina		Attack 3			HitEffect			Attack																					x									
+Quina		Attack 4			HitEffect			Attack																					x									
+Quina		Attack Ally 1	My bad!		HitEffect			Attack														x					x	x										
+$!:	!Quina:Blind	Quina/Attack Blind 1	I still smell you!		Damaged	1		Attack	Quina														x															
+$!:	!Quina:Blind	Quina/Attack Blind 2	You no hide from me!		Damaged	1		Attack	Quina														x															
+$!:	!Quina:Blind	Quina/Attack Blind 3	This no stop me!		Damaged	1		Attack	Quina														x															
+$!:	!Quina:Blind	Quina//Attack Blind 4	Nothing stop dinner time!		Damaged	1		Attack	Quina														x															
+Quina		Blinded 1	Where everybody go?		Added					Blind																												
+Quina		Blinded 2	Helloooo?		Added					Blind																												
+Quina		Blinded 3	Where the sun go?		Added					Blind																												
+Quina		Blinded 4	Oh, that's mean!		Added					Blind																												
+Quina		Blinded 5	Where you go!		Added					Blind																												
+Quina		Blinded 6	Guys?		Added					Blind																												
+Quina		Cant Eat 1	No eat? Why not?		EatCannot																																	
+Quina		Cant Eat 2	I confused? No eat?		EatCannot																																	
+Quina		Cant Eat 3	Sorcery!		EatCannot																																	
+Quina		Cant Eat 4	That no fair!		EatCannot																																	
+Quina		Cant Eat 5	Why I even here?		EatCannot																																	
+Quina		Cant Eat 6	Saaaad...		EatCannot																																	
+Quina		Cant Eat 7	Stupid rules..		EatCannot																																	
+Quina		Change 1	Is there nom-noms over here?		ChangeFront, ChangeBack																																	
+Quina		Change 2	Time to move.		ChangeFront, ChangeBack																																	
+Quina		Change 3	Maybe this better?		ChangeFront, ChangeBack																																	
+Quina		Change 4	How about this?		ChangeFront, ChangeBack																																	
+Quina		Change 5	I no like it there.		ChangeFront, ChangeBack																																	
+Quina		Cook 1	Time to cook!		CommandPerform		1000	Cook																														
+Quina		Counter 1	You done it now!		CommandPerform			Counter																														
+Quina		Crit 1			HitEffect																					x	x	x										
+Quina		Crit 2			HitEffect																					x	x	x										
+Quina		Damage 1	You mean!		Damaged																x				x	x	x	x										
+Quina		Damage 2	Ouchies!		Damaged																x				x													
+Quina		Damage 3			Damaged																																	
+Quina		Damage 4			Damaged																																	
+Quina		Damage 5			Damaged																																	
+Quina		Damage 6	Why me?		Damaged																x				x	x	x	x										
+Quina		Damage 7	I get you for that!		Damaged																x				x	x	x	x										
+Quina		Damage 8			Damaged																																	
+Quina		Damage 9			Damaged																																	
+Quina		Death 1	Need more food...		Added					Death																												
+Quina		Death 2	I get you.. next time...		Added					Death																												
+Quina		Death 3	Too... hungry...		Added					Death																												
+Quina		Death 4	Maybe I for dinner...		Added					Death																												
+Quina		Death 5	Sleepy time...		Added					Death																												
+Quina		Defend 1	This no fun..		CommandPerform			Defend																														
+Quina		Defend 2	No more ouchies!		CommandPerform			Defend																														
+Quina		Defend 3	You no see me!		CommandPerform			Defend																														
+Quina		Defend 4	You. No. see me!		CommandPerform			Defend																														
+Quina		Defend 5	No more!		CommandPerform			Defend																														
+Quina		Dodge 1	Ah, ah, aaah.		Dodged, Missed																				x													
+Quina		Dodge 2	Nope, bad dinner!		Dodged, Missed																				x													
+Quina		Dodge 3	You no eat me, I eat you!		Dodged, Missed																				x													
+Quina		Dodge 4	Whoahhhh.		Dodged, Missed																				x													
+Quina		Dodge 5	Haha, miss me!		Dodged, Missed																				x													
+Quina		Dodge 6	Whoop!		Dodged, Missed																				x													
+Quina		Dodge 7	Nope.		Dodged, Missed																				x													
+Quina		Eat 1	Time for dinner!		CommandPerform			Eat, Cook																														
+Quina		Eat 2	Anybody hungry?		CommandPerform			Eat, Cook																														
+Quina		Eat 3	Now for the main course!		CommandPerform			Eat, Cook																														
+Quina		Eat 4	Finally, I starving!		CommandPerform		0	Eat, Cook																														
+Quina		Eat 5	Bon appetit!		CommandPerform			Eat, Cook																														
+Quina		Eat 6	Dinner time!		CommandPerform			Eat, Cook																														
+Quina		Eat 7	Nom nom nom!		CommandPerform		0	Eat, Cook																														
+Quina		Eat 8	Two pinch of salt, and one you!		CommandPerform			Eat, Cook																														
+Quina		Eat 9	Finally, I starving!		CommandPerform		0	Eat, Cook																														
+Quina		Eat 10	In the belly you go!		CommandPerform			Eat, Cook																														
+Quina		Eat Fail 1	It's rawwwwwww!		EatFail																																	
+Quina		Eat Fail 2	Maybe five more minutes.		EatFail																																	
+Quina		Eat Fail 3	Is not done yet? Ughh...		EatFail																																	
+Quina		Eat Fail 4	Cook faster!		EatFail																																	
+Quina		Eat Fail 5	Why no you cook!		EatFail																																	
+Quina		Eat Fail 6	You still not ready?		EatFail																																	
+Quina		Eat Fail 7	Any time now...		EatFail																																	
+Quina	$Vivi	Eat Fail 8	Need more heat... Vivi!		EatFail																																	
+Quina		Eat Fail 9	How long I need wait!		EatFail																																	
+Quina		Eat Success 1	Yummy!		EatSuccess																																	
+Quina		Eat Success 2	HmmMMm, I eat again!		EatSuccess																																	
+Quina		Eat Success 3	Cooked to perfection!		EatSuccess																																	
+Quina		Eat Success 4	Hmmm not bad.		EatSuccess																																	
+Quina		Eat Success 5	That good!		EatSuccess																																	
+Quina		Eat Success 6	Not bad, had better.		EatSuccess																																	
+Quina		Eat Success 7	On to next course!		EatSuccess																																	
+Quina		Eat Success 8	Out of frying pan, into belly!		EatSuccess																																	
+Quina		Eat Success 9	HmmMMm nom nom!		EatSuccess																																	
+Quina		Eat Taste Bad 1	Blahhh.		EatBad																																	
+Quina		Eat Taste Bad 2	Ehh, not enough salt..		EatBad																																	
+Quina		Eat Taste Bad 3	Look yummy, taste yucky...		EatBad																																	
+Quina		Eat Taste Bad 4	Nope, bad idea.. ehhh.		EatBad																																	
+Quina		Eat Taste Bad 5	Eww... Time for a new recipe..		EatBad																																	
+Quina		Eat Taste Bad 6	Where the lamb sauce!		EatBad																																	
+Quina		Healed 1	Yay!		Healed																																	
+Quina		Healed 2	Much better!		Healed																																	
+Quina		Healed 3	Just what I needed!		Healed																																	
+Quina		Healed 4	Thank you!		Healed																x																	
+Quina		Healed 5	For me?		Healed			Item													x																	
+Quina		Healed 6	You the best!		Healed																x																	
+Quina		Healed 7	Aaaaah! That was great!		Healed			Item	Quina																x													
+!Quina	!:78,!:79,!:331,!:676	Intro+Fish 1	Hmm? Seafood!		BattleStart		1000																											x				
+!Quina	!:78,!:79,!:331,!:677	Intro+Fish 2	Why that fish fly?		BattleStart		1000																											x				
+!Quina	!:137	Intro+Froggy 1	Froooggy!		BattleStart		1000																											x				
+Quina	$Vivi	Intro+Vivi 1	Vivi, cook him! I getting hungry!		BattleStart		200																											x				x
+Quina		Intro 1	Anybody hungry?		BattleStart																													x				x
+Quina		Intro 2	Ohh, you look yummy!		BattleStart																													x				x
+Quina		Intro 3	Why you want fight?		BattleStart																													x				x
+Quina		Intro 4	Ohh look, delivery!		BattleStart																													x				x
+Quina		Intro 5	Ohh, munchies!		BattleStart																													x				x
+Quina		Intro 6	You not get in my way!		BattleStart																													x				x
+Quina		Intro 7	If you no have food, I make YOU food!		BattleStart																													x				x
+Quina		Intro 8	Woah! Tasties!		BattleStart																													x				x
+Quina		Intro 9	Good timing, I getting hungry!		BattleStart																													x				x
+Quina		Intro 10	Ohhh, you smell good!		BattleStart																													x				x
+Quina		Intro 11	Now is time you show skill boys!		BattleStart																													x				x
+Quina		Intro 12	Now is dinner time?		BattleStart																													x				x
+Quina		Intro 13	We no play with food!		BattleStart																													x				x
+Quina		Intro Back Attack 1	We no ready yet!		BattleStart																											x	x					x
+Quina		Intro Back Attack 2	Uh-oh, not good!		BattleStart																											x	x					x
+Quina		Kill 1	Next!		KillEffect																x		x															
+Quina		Kill 2	Such a waste!		KillEffect																x		x															
+Quina		Kill 3	Time out for you!		KillEffect																x		x															
+Quina		Leaving Trance 1	Ugh... well.		TranceLeave																																	
+Quina		Leaving Trance 2	That was fun.		TranceLeave																																	
+Quina		Leaving Trance 3	Okay, I'm good now.		TranceLeave																																	
+Quina		Leaving Trance 4	What was that?		TranceLeave																																	
+Quina		Leaving Trance 5	Did I oopsies?		TranceLeave																																	
+Quina		Low HP 1	Why...? Ughh.		Added					LowHP																												
+Quina		Low HP 2	Must eat...		Added					LowHP																												
+Quina		Low HP 3	I tired...		Added					LowHP																												
+Quina		Low HP 4	Why food attack me?		Added					LowHP																x												
+Quina		Low HP 5	I no food, you are!		Added					LowHP																x												
+Quina		Low HP 6	I need eat more...		Added					LowHP																												
+Quina		Miss 1	No fair!		MissEffect, DodgeEffect																		x															
+Quina		Miss 2	How dare you!		DodgeEffect																		x															
+Quina		Miss 3	Come here!		DodgeEffect																		x															
+Quina		Miss 4	Excuse me!?		DodgeEffect																		x															
+Quina		Miss 5	Dinner. Should. Not. Move!		MissEffect, DodgeEffect																		x															
+Quina:Blind		Miss Blind 1	I will get you.		MissEffect, DodgeEffect	1															x		x															
+Quina		Miss Blind 2			MissEffect, DodgeEffect																x		x															
+Quina		Miss Blind 3			MissEffect, DodgeEffect																x		x															
+Quina:Blind		Miss Blind 4	No fair!		MissEffect, DodgeEffect	1															x		x															
+Quina:Blind		Miss Blind 5	Now you make me angry!		MissEffect, DodgeEffect	1															x		x															
+Quina:Blind		Miss Blind 6	Where are you!		MissEffect, DodgeEffect	1															x		x															
+Quina:Blind		Miss Blind 7	This no fair!		MissEffect, DodgeEffect	1															x		x															
+Quina		Poisoned 1	I feel.. funny?		Added					Venom, Virus, Trouble, Zombie, Confuse, Berserk, Poison, Heat, Mini																												
+Quina		Potion 1	Here you go!		CommandPerform			Item																														
+Quina		Potion 2	Here, eat this!		CommandPerform			Item																														
+Quina		Potion 3	You no look so good.		CommandPerform			Item																														
+Quina		Potion 4	Need help?		CommandPerform			Item																														
+Quina		Potion 5	You need doctor!		CommandPerform			Item																														
+Quina		Potion Self 1	Aaah! Break time, need water.		CommandPerform			Item			Potion, HiPotion, Elixir, Ether											x	x															
+Quina		Revived 1	Did I miss dinner?		Removed					Death																												
+Quina		Revived 2	Ughh.. Five more minutes..		Removed					Death																												
+Quina		Revived 3	Something happening?		Removed					Death																												
+Quina		Revived 4	Is dinner time now?		Removed					Death																												
+Quina		Revived 5	Ughh... Is dinner time now?		Removed					Death																												
+Quina		Revived 6	What happened?		Removed					Death																												
+Quina		Revived 7	Ughh... Dinner, when?		Removed					Death																												
+Quina		Revived Life 1	Ughh... Morning!		Removed					Death		Life, FullLife																										
+Quina		Reviving 1	No time for sleep!		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Quina		Reviving 2	You miss dinner!		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Quina		Reviving 3	Up you get.		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Quina		Reviving 4	Lazy bum!		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Quina		Reviving 5	No sleeping on job!		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Quina		Reviving 6	Get up!		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Quina		Sleeping 1	Aww... I ate too much .		Added					Sleep																												
+Quina		Trance 1	Why you make me do this!		TranceEnter																																	
+Quina		Trance 2	Fighting pointless!		TranceEnter																																	
+Quina		Trance 3	Time to cook!		TranceEnter																																	
+Quina		Trance 4	Now we eat you!		TranceEnter																																	
+Quina		Trance 5	My turn, aha!		TranceEnter																																	
+Quina		Trance 6	Now I angry!		TranceEnter																																	
+Quina		Trance 7	You will be dinner!		TranceEnter																																	
+Quina		Trance 8	Silly munchies!		TranceEnter																																	
+Quina		Trance 9	That's it, stoves on!		TranceEnter																																	
+Quina		Trance 10	No more nice Quina!		TranceEnter																																	
+Quina		Trance 11			TranceEnter																																	
+Quina		Victory 1	On to next course!		VictoryPose																																	
+Quina		Victory 2	Hurray!		VictoryPose																																	
+Quina		Victory 3	I hope there more, I no full yet.		VictoryPose																																	
+Quina		Victory 4	We win, but I still hungry..		VictoryPose																																	
+Quina		Victory 5	Job done!		VictoryPose																																	
+Quina		Victory 6	Did I win?		VictoryPose																																	
+Quina		Victory Solo Alive 1	Guys?		VictoryPoseSurvivor																																	
+Quina		Victory Solo Alive 2	More for me then!		VictoryPoseSurvivor																																	
+!Quina	$Vivi	Vivi Casts Fire 1	Cook'em Vivi!		CommandInput							Fire, Fira, Firaga									x		x															
+!Quina	$Vivi	Vivi Casts Fire 2	Make'em well done!		CommandInput							Fire, Fira, Firaga									x		x															
+!Quina	$Vivi	Vivi Kills With Blizard 1	Frozen food no good!		KillEffect							Blizzard, Blizzara, Blizzaga									x		x															
+!Quina	$Vivi	Vivi Kills With Blizard 2	Ice cream à la... something.		KillEffect							Blizzard, Blizzara, Blizzaga									x		x															
+!Quina	$Vivi	Vivi Kills With Blizard 3	HmMmm! Popsicle!		KillEffect							Blizzard, Blizzara, Blizzaga									x		x															
+!Quina	$Vivi	Vivi Kills With Blizard 4	Flash frozen? Yuck!		KillEffect							Blizzard, Blizzara, Blizzaga									x		x															
+!Quina	$Vivi	Vivi Kills With Fire 1	Crispy around the edges!		KillEffect							Fire, Fira, Firaga									x		x															
+!Quina	$!4:427	Intro+Beatrix 1	We make you, idiot sandwich!		BattleStart	1000																																
+Freya		Attack 1			HitEffect																								x									
+Freya		Attack 2			HitEffect																								x									
+Freya		Attack 3			HitEffect																								x									
+Freya		Attack 4			HitEffect																								x									
+Freya		Attack 5			HitEffect																								x									
+Freya		Attack 6			HitEffect																								x									
+Freya		Attack 7			HitEffect																								x									
+Freya		Attack 8			HitEffect																								x									
+Freya		Attack 9			HitEffect																								x									
+Freya		Change 1	Moving.		ChangeFront, ChangeBack																																	
+Freya		Change 2	Worth a try.		ChangeFront, ChangeBack																																	
+Freya		Change Front 1	A better vantage.		ChangeFront																																	
+Freya		Cherry Blossom 1	To hells with you!		CommandPerform							CherryBlossom																										
+Freya		Cherry Blossom 2	I am done dawdling.		CommandPerform							CherryBlossom																										
+Freya		Cherry Blossom 3	You will NOT underestimate me!		CommandPerform							CherryBlossom																										
+Freya		Cherry Blossom 4	This is the end.		CommandPerform							CherryBlossom																										
+Freya		Cherry Blossom 5	I dare you to keep standing.		CommandPerform							CherryBlossom																										
+Freya		Crit 1	Behold!		HitEffect			Attack													x		x			x	x	x										
+Freya		Crit 2	You won't escape!		HitEffect			Attack													x		x			x	x	x										
+Freya		Crit 3	Found your weak point.		HitEffect			Attack													x		x			x	x	x										
+Freya		Crit 4			HitEffect			Attack													x		x			x	x	x										
+Freya		Crit 5			HitEffect			Attack													x		x			x	x	x										
+Freya		Crit 6			HitEffect			Attack													x		x			x	x	x										
+Freya		Crit 7			HitEffect			Attack													x		x			x	x	x										
+Freya		Crit 8			HitEffect			Attack													x		x			x	x	x										
+Freya		Crit 9			HitEffect			Attack													x		x			x	x	x										
+Freya		Damage 1	I'll repay that tenfold!		Damaged																x		x		x	x	x	x										
+Freya		Damage 2	Heh... Not bad...		Damaged																x		x		x	x	x	x										
+Freya		Damage 3			Damaged																																	
+Freya		Damage 4			Damaged																																	
+Freya		Damage 5			Damaged																																	
+Freya		Damage 6			Damaged																																	
+Freya		Damage 7			Damaged																																	
+Freya		Damage 8			Damaged																																	
+Freya		Damage 9			Damaged																																	
+Freya		Damage 10			Damaged																																	
+Freya		Damage 11			Damaged																																	
+Freya		Damage 12			Damaged																																	
+Freya		Damage 13			Damaged																																	
+Freya		Damage 14			Damaged																																	
+Freya		Damage 15			Damaged																																	
+Freya		Death 1	Sir Fratley...		Added					Death																												
+Freya		Death 2	The fight... it must go on...		Added					Death																												
+Freya		Death 3	We must... persevere...		Added					Death																												
+Freya		Death 4	A Dragon Knight... admits... defeat...		Added					Death																												
+Freya		Death 5	I leave it... to you all...		Added					Death																												
+Freya		Death 6	O Burmecia... forgive me...		Added					Death																												
+Freya		Death 7	Fratley... If only I...		Added					Death																												
+Freya		Death 8	The darkness... lingers...		Added					Death																												
+Freya		Death 9	A fitting end...		Added					Death																												
+Freya:Blind		Death Blinded 1	I never saw my slayer.		Added		2000			Death																												
+Freya		Defend 1	Fratley give me strength.		CommandPerform			Defend																														
+Freya		Defend 2	Let's bide the time.		CommandPerform			Defend																														
+Freya		Defend 3	Reflect on the plan!		CommandPerform			Defend																														
+Freya		Defend 4	Let's hold ground.		CommandPerform			Defend																														
+Freya		Defend 5	I assume there's a strategy here?		CommandPerform			Defend																														
+Freya		Dodge 1	Hmph. Pathetic.		Dodged, Missed																				x													
+Freya		Dodge 2	How drool...		Dodged, Missed																				x													
+Freya		Dodge 3	Ha ha!		Dodged, Missed																				x													
+Freya		Dragon Breath 1	Need to catch a breath?		CommandPerform							DragonBreath																										
+Freya		Dragon Breath 2	They shall know a Dragon's rage!		CommandPerform							DragonBreath																										
+Freya		Dragon Breath 3	It is over!		CommandPerform							DragonBreath																										
+Freya		Dragon Breath 4	Raze the battlefield!		CommandPerform							DragonBreath																										
+Freya		Dragon Crest 1	Thank you, Dragon spirits.		CommandPerform							DragonCrest																										
+Freya		Dragon Crest 2	Heh, a normal spear will do.		CommandPerform							DragonCrest																										
+Freya		Dragon Crest 3	And that's all you get.		CommandPerform							DragonCrest																										
+Freya		Dragon Crest 4	You aren't worth more than that.		CommandPerform							DragonCrest																										
+Freya		Dragon Crest 5	Alright. Let's finish the rest.		CommandPerform							DragonCrest																										
+Freya		Dragon Crest 6	No more need for the dramatic.		CommandPerform							DragonCrest																										
+Freya		Healed 1	Just in time.		Removed					LowHP																												
+Freya		Healed Ally 1	You have my thanks.		Healed																x																	
+Freya		Healed Ally 2	I am in your debt.		Healed																x																	
+Freya		Healed Ally 3	I'll repay that.		Healed																x																	
+Freya		Healed Ally 4	Most gracious of you.		Healed																x																	
+Freya		Intro 1	Let's test our mettle here.		BattleStart												x																	x	x			x
+Freya		Intro 2	Have they a deathwish?		BattleStart																												x		x			x
+Freya		Intro 3	Let us route the rabble.		BattleStart												x																	x	x			x
+Freya		Intro 4	We don't have time to waste.		BattleStart												x															x	x		x			x
+Freya		Intro 5	It never ends...		BattleStart																												x	x	x			x
+Freya		Intro 6	More things to whet my spear.		BattleStart																													x	x			x
+Freya		Intro 7	An interesting challenge.		BattleStart																											x	x		x			x
+Freya		Intro 8	Defeat is all you face here.		BattleStart																												x	x	x			x
+Freya		Intro 9	I won't be defeated.		BattleStart																											x	x		x			x
+Freya		Intro 10	Testing a Dragon Knight? Fascinating.		BattleStart																												x		x			x
+Freya		Intro 11	Don't be careless!		BattleStart												x																		x			x
+Freya		Intro 12	Time is of the essence, be quick.		BattleStart												x																	x	x			x
+Freya		Intro 13	You wish to test us?		BattleStart												x															x	x		x			x
+Freya		Intro 14	A perfect chance to test my skills.		BattleStart																													x	x			x
+Freya		Intro 15	Stay focused.		BattleStart												x																x		x			x
+Freya		Intro 16	Do not let up.		BattleStart												x															x	x		x			x
+Freya		Intro 17	We shall win this.		BattleStart												x																x		x			x
+Freya		Intro 18	Everyone, look sharp!		BattleStart												x																	x	x			x
+Freya		Intro 19	You're wasting our time.		BattleStart												x															x	x		x			x
+Freya		Intro 20	Failure is not an option.		BattleStart																														x			x
+Freya		Intro 21	Be sure to pace yourself.		BattleStart												x																	x	x			x
+Freya		Intro 22	I foresee no difficulty.		BattleStart																													x	x			x
+Freya		Intro 23	So be it.		BattleStart																											x	x		x			x
+Freya		Intro 24	Hesitation is defeat.		BattleStart																													x	x			x
+Freya		Kill 1	And another one falls.		KillEffect																x		x															
+Freya		Kill 2	Farewell.		KillEffect																x		x															
+Freya		Kill 3	An easy strike.		KillEffect																x		x															
+Freya		Kill 4	Goodnight.		KillEffect																x		x															
+Freya		Kill 5	Rest now.		KillEffect																x		x															
+Freya		Kill 6	Time to sleep.		KillEffect																x		x															
+Freya		Kill 7	Foe eliminated.		KillEffect																x		x															
+Freya		Kill 8	This one is mine!		KillEffect																x		x															
+Freya		Lancer 1	This'll be quick!		CommandPerform							Lancer, Spear1, Spear2																										
+Freya		Lancer 2	Here it comes!		CommandPerform							Lancer, Spear1, Spear2																										
+Freya		Lancer 3	Have at thee!		CommandPerform							Lancer																										
+Freya		Lancer 4	You're in for it!		CommandPerform							Lancer, Spear1, Spear2																										
+Freya		Lancer 5	Do not test me!		CommandPerform							Lancer																										
+Freya		Low HP 1	Must persevere...		Added					LowHP																												
+Freya		Low HP 2	I was careless...		Added					LowHP																												
+Freya		Low HP 3	I won't give up...!		Added					LowHP																												
+Freya		Low HP 4	Might need some help...		Added					LowHP																												
+Freya		Low HP 5	Not bad...		Added					LowHP																x												
+Freya		Low HP 6	Surprising...		Added					LowHP																x												
+Freya		Luna 1	This... is where we fight!		CommandPerform							Luna																										
+Freya		Luna 2	Let us drop all pretenses!		CommandPerform							Luna																										
+Freya		Luna 3	An exchange between warriors!		CommandPerform							Luna																										
+Freya		Luna 4	Let the fight determine the outcome!		CommandPerform							Luna																										
+Freya		Luna 5	Til only one is left standing!		CommandPerform							Luna																										
+Freya		Miss 1	You're more nimble than I had anticipated.		DodgeEffect																																	
+Freya		Miss 2	Oh! not bad!		MissEffect																																	
+Freya		Miss 3	My form's slipping...		MissEffect																																	
+Freya		Miss 4	Luck is a fact of life.		DodgeEffect, MissEffect																																	
+Freya		Miss 5	A temporary setback.		DodgeEffect, MissEffect																																	
+Freya:Blind		Miss Blind 1	Use your other senses, Freya!		MissEffect, DodgeEffect	1																																
+Freya:Blind		Miss Blind 2	Do not allow this to handicap you!		MissEffect, DodgeEffect	1																																
+Freya:Blind		Miss Blind 3	You've trained for worse than this!		MissEffect, DodgeEffect	1																																
+Freya:Blind		Miss Blind 4	I cannot stand this affliction...		MissEffect, DodgeEffect	1																																
+Freya		Potion 1	Here.		CommandPerform			Item													x																	
+Freya		Potion 2	Quickly now.		CommandPerform			Item																														
+Freya		Potion Ally 1	Don't waste a drop.		CommandPerform			Item			Potion, HiPotion, Elixir, Annoyntment, Antidote, Soft, EyeDrops, EchoScreen, Vaccine, MagicTag, Remedy, Ether										x																	
+Freya		Potion Ally 2	Looks like you could use this.		CommandPerform			Item													x																	
+Freya		Potion Self 1	I won't waste another.		CommandPerform			Item															x															
+Freya		Potion Self 2	Let's try that again.		CommandPerform			Item															x															
+Freya		Reis Wind 1	Reis, I beseech you!		CommandPerform							ReisWind																										
+Freya		Reis Wind 2	For a battle of attrition!		CommandPerform							ReisWind																										
+Freya		Reis Wind 3	May the winds of Reis guide us.		CommandPerform							ReisWind																										
+Freya		Reis WInd 4	Reis... lend us your strength.		CommandPerform							ReisWind																										
+Freya		Reis Wind 5	We shall prevail!		CommandPerform							ReisWind																										
+Freya		Revived 1	You have my gratitude...		Removed					Death																												
+Freya		Revived 2	Right right... to the fight.		Removed					Death																												
+Freya		Revived 3	It's not over, I see.		Removed					Death																												
+Freya		Revived 4	Only a short respite.		Removed					Death																												
+Freya		Reviving 1	On your feet.		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Freya		Reviving 2	We need you attentive.		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Freya		Reviving 3	No more lazing about.		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Freya		Reviving 4	Quickly, up you go.		CommandPerform			Item			PhoenixDown, PhoenixPinion																											
+Freya		Six Dragons 1	We cannot do this alone!		CommandPerform							SixDragons																										
+Freya		Six Dragons 2	We must do what we can!		CommandPerform							SixDragons																										
+Freya		Six Dragons 3	Victory... whatever it takes!		CommandPerform							SixDragons																										
+Freya		Six Dragons 4	Only together are we formidable!		CommandPerform							SixDragons																										
+Freya		Six Dragons 5	This fight comes down to all of us!		CommandPerform							SixDragons																										
+Freya		Six Dragons 6	Together we stand!		CommandPerform							SixDragons																										
+Freya		Trance 1	Now let's see if you can take what you dish out!		TranceEnter																																	
+Freya		Trance 2	Witness my Dragon's pride!		TranceEnter																																	
+Freya		Trance 3	I shall hold back no more!		TranceEnter																																	
+Freya		Trance 4	Let us fight with all we've got!		TranceEnter																																	
+Freya		Trance 5	I refuse to submit!		TranceEnter																																	
+Freya		Victory 1	An outcome I expected.		VictoryPose																																	
+Freya		Victory 2	Just one victory of many.		VictoryPose																																	
+Freya		Victory 3	A good team? spells a good outcome.		VictoryPose												x																					
+Freya		Victory 4	Nice. But my form could still use some work.		VictoryPose																																	
+Freya		Victory 5	We could've done it quicker. Always room for growth.		VictoryPose												x																					
+Freya		Victory 6	They underestimated us at their own peril.		VictoryPose												x																					
+Freya		Victory 7	Yes, yes, that's a win worth celebrating.		VictoryPose												x																					
+Freya		Victory 8	Don't tell me you expected different?		VictoryPose												x																					
+Freya		Victory 9	I admit: it was fun fight.		VictoryPose																																	
+Freya		Victory 10	Yep. Definitely a 3.		VictoryPose																																	
+Freya		Victory 11	Your decision making was questionable.		VictoryPose																																	
+Freya		Victory 12	An experience worth remembering.		VictoryPose																																	
+Freya		Victory 13	We make quite the team.		VictoryPose												x																					
+Freya		Victory 14	A Dragon Knight, never loses.		VictoryPose																																	
+Freya		Victory 15	That's how it's done.		VictoryPose																																	
+Freya		Victory 16	Excellent.		VictoryPose																																	
+Freya		White Draw 1	Do NOT let your spirits drop!		CommandPerform							WhiteDraw																										
+Freya		White Draw 2	Allow the winds to carry you.		CommandPerform							WhiteDraw																										
+Freya		White Draw 3	The fight is far from over!		CommandPerform							WhiteDraw																										
+Freya		White Draw 4	Time to go all out!		CommandPerform							WhiteDraw																										
+Freya		White Draw 5	Here we strike back hard!		CommandPerform							WhiteDraw																										
+Freya		Special Intro 1	Probably the second one..		BattleStart												x	x																				
+Freya		Special Intro 2	That they will.		BattleStart												x	x																				
+Freya		Special Intro 3	Focus on the fight!		BattleStart												x	x																				
+Freya		Special Intro BM 1	Vivi, what's happening?		BattleStart												x	x																				
+Freya		Special Intro BM 2	I will avenge my brethren!		BattleStart												x	x																				
+Freya		Special Intro BM 3	If you are allies of Vivi, then answer us!		BattleStart												x	x																				
+Freya		Special Intro BM 4	Are you behind the attack? Answer me!		BattleStart												x	x																				
+Freya		Special Intro BM 5	Who are you working for!?		BattleStart												x	x																				
+Freya		Special Intro BM 6	Speak! And I'll consider letting you live.		BattleStart												x	x																				
+Eiko		Attack 1			HitEffect			Attack																					x									
+Eiko		Attack 2			HitEffect			Attack																					x									
+Eiko		Attack Ally 1	Sorry!		HitEffect			Attack													x	x			x													
+Eiko		Attack Ally 2	Oh no!		HitEffect			Attack														x			x													
+Eiko		Attack Ally 3	Sorry!		HitEffect			Attack													x	x			x													
+Eiko:Berserk		Attack Berserk 1	Ah! I can't..		CommandPerform			Attack																														
+Eiko:Berserk		Attack Berserk 2			CommandPerform			Attack																														
+$!:	!Eiko:Blind	Eiko/Attack Blind 1	What'd I hit?		Damaged			Attack	Eiko																													
+$!:	!Eiko:Blind	Eiko/Attack Blind 2	Oops, I think I hit something bad.		Damaged			Attack	Eiko																													
+$!:	!Eiko:Blind	Eiko/Attack Blind 3	I hit the right thing, right?		Damaged			Attack	Eiko																													
+$!:	!Eiko:Blind	Eiko/Attack Blind 4	Ohh, sorry?		Damaged			Attack	Eiko																													
+$!:	!Eiko:Blind	Eiko/Attack Blind 5	Did I get 'em?		Damaged			Attack	Eiko																													
+$!:	!Eiko:Blind	Eiko/Attack Blind 6	I.. I got 'em!		Damaged			Attack	Eiko																													
+Eiko:Blind		Eiko/Attack Blind 7	Don't worry, I got this!		CommandPerform		10	Attack																														
+$!:	!Eiko:Blind	Eiko/Attack Blind 8	Did I hit the wrong thing?		Damaged			Attack	Eiko																													
+Eiko:Blind		Eiko/Attack Blind 9	I think you're there!		CommandPerform		10	Attack																														
+Eiko		Berserked 1			Added					Berserk																												
+Eiko		Berserked 2			Added					Berserk																												
+Eiko		Berserked 3			Added					Berserk																												
+Eiko		Berserked 4	Can't control.		Added					Berserk																												
+Eiko		Berserked 5	My right arm twitches.		Added					Berserk																												
+Eiko		Berserked 6			Added					Berserk																												
+Eiko		Blinded 1	I can't see!		Added					Blind																												
+Eiko		Blinded 2	Who turned the lights off!!		Added					Blind																												
+Eiko		Blinded 3	It's so dark!		Added					Blind																												
+Eiko		Blinded 4			Added					Blind																												
+Eiko		Blinded 5	Who turned out the lights?		Added					Blind																												
+Eiko		Blinded 6	Who turned off all the lights?		Added					Blind																												
+Eiko		Blinded 7	Who turned off all the lights?		Added					Blind																												
+Eiko		Blinded 8	it's dark!		Added					Blind																												
+Eiko		Blinded 9	Did the sun get covered?		Added					Blind																												
+Eiko		Blinded 10	I can't see!		Added					Blind																												
+Eiko		Blinded 11	How am I supposed to see?		Added					Blind																												
+Eiko		Blinded 12	I hate blind!		Added					Blind																												
+Eiko		Blinded 13	It's dark!		Added					Blind																												
+Eiko		Blinded 14	It's dark!		Added					Blind																												
+Eiko		Blinded 15	I thought it was daytime!		Added					Blind																												
+Eiko		Blinded 16	Whered the sun go?		Added					Blind																												
+Eiko		Blinded 17	I can't see!		Added					Blind																												
+Eiko		Change Back 1	And to the back.		ChangeBack																																	
+Eiko		Change Back 2	I'm going to the back now.		ChangeBack																																	
+Eiko		Change Back 3	I'm gonna go to the back.		ChangeBack																																	
+Eiko		Change Back 4	I'll be right behind you!		ChangeBack																																	
+Eiko		Change Back 5	And to the back I go! bye!		ChangeBack																																	
+Eiko		Change Front 1	It's my turn now!		ChangeFront																																	
+Eiko		Change Front 2	Coming to the front.		ChangeFront																																	
+Eiko		Change Front 3	Alright, front and center!		ChangeFront																																	
+Eiko		Change Front 4	Here I come!		ChangeFront																																	
+Eiko		Change Front 5	Alright, here I go!		ChangeFront																																	
+Eiko		Change Front 6	Now Im at the front.		ChangeFront																																	
+Eiko		Change Front 7	I'll lead.		ChangeFront																																	
+Eiko		Change Front 8	Now I'm the leader.		ChangeFront																																	
+Eiko		Crit 1	This is it.		HitEffect																x		x			x	x	x										
+Eiko		Crit 2	You can't miss.		HitEffect																x		x			x	x	x										
+Eiko		Crit 3			HitEffect																x		x			x	x	x										
+Eiko		Crit 4	Can't escape.		HitEffect																x		x			x	x	x										
+Eiko		Crit 5	Here I come!		HitEffect																x		x			x	x	x										
+Eiko		Crit 6	Gotcha.		HitEffect																x		x			x	x	x										
+Eiko		Crit 7	Now face me!		HitEffect																x		x			x	x	x										
+Eiko		Crit 8			HitEffect																x		x			x	x	x										
+Eiko		Crit 9	Gotcha.		HitEffect																x		x			x	x	x										
+Eiko		Crit 10	This is gonna hurt.		HitEffect		0														x		x			x	x	x										
+Eiko		Crit 11	Face my fury.		HitEffect																x		x			x	x	x										
+Eiko		Crit 12	Don't fall for me.		HitEffect																x		x			x	x	x										
+Eiko		Crit 13	Now die.		HitEffect																x		x			x	x	x										
+Eiko		Curaga 1	Curaga!		CommandPerform							Curaga																										
+Eiko		Cure 1	Cure!		CommandPerform							Cure																										
+Eiko		Cure Amarant 1	Not so tough now are ya?		CommandPerform			WhiteMagicEiko, Item	Amarant			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Amarant 2	Not so tough now are ya?		CommandPerform			WhiteMagicEiko, Item	Amarant			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Dagger 1	I've got you Dagger.		CommandPerform			WhiteMagicEiko, Item	Garnet			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Dagger 2	I've got you Princess.		CommandPerform			WhiteMagicEiko, Item	Garnet			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Dagger 3	I've got you Garnet.		CommandPerform			WhiteMagicEiko, Item	Garnet			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Dagger 4	Don't worry about it Dagger.		CommandPerform			WhiteMagicEiko, Item	Garnet			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Dagger 5	Feel better.		CommandPerform			WhiteMagicEiko, Item	Garnet			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Dagger 6	Take notes.		CommandPerform				Garnet			Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Freya 1	Feel better.		CommandPerform			WhiteMagicEiko, Item	Freya			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Freya 2	Are you feeling better now?		CommandPerform			WhiteMagicEiko, Item	Freya			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Freya 3	You okay there?		CommandPerform			WhiteMagicEiko, Item	Freya			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Freya 4	Don't worry, I got you.		CommandPerform			WhiteMagicEiko, Item	Freya			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Quina 1	I told ya not to eat too much.		CommandPerform			WhiteMagicEiko, Item	Quina			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Steiner 1	Does that armour even help?		CommandPerform			WhiteMagicEiko, Item	Steiner			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Steiner 2	Aren't you supposed to be a knight?		CommandPerform			WhiteMagicEiko, Item	Steiner			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Steiner 3	Some knight you are.		CommandPerform			WhiteMagicEiko, Item	Steiner			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Vivi 1	Don't worry kid, I got you.		CommandPerform			WhiteMagicEiko, Item	Vivi			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Vivi 2	Don't be sad, you'll get stronger.		CommandPerform			WhiteMagicEiko, Item	Vivi			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Vivi 3	Don't worry about it, I've got you.		CommandPerform			WhiteMagicEiko, Item	Vivi			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Zidane 1	I'll save you, Zidane!		CommandPerform			WhiteMagicEiko, Item	Zidane			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Zidane 2	Ive got you Zidane.		CommandPerform			WhiteMagicEiko, Item	Zidane			Void, Cure, Cura, Curaga, Panacea, Stona, Esuna									x				x													
+Eiko		Cure Party 1	We can do better than this!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 2	We can do better than this!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 3	C'mon team, we got this!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 4	C'mon team, we got this!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 5	Leave it to me!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 6	Leave it to me!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 7	I can't carry us forever!		CommandPerform							Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 8	You guys have to do something too y'know!		CommandPerform							Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 9	Have I gotta do everything around here?		CommandPerform		33					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 10	Have I gotta do everything around here?		CommandPerform		33					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 11	Have I gotta do everything around here?		CommandPerform		33					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 12	My time to shine!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 13	My time to shine!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 14	Eiko - 1, Team - 0!		CommandPerform							Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 15	Mog, help us!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 16	Mog, help us!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 17	Told you I wasn't a kid!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 18	Told you I wasn't a kid!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 19	We're not done yet!		CommandPerform							Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 20	You guys aren't done already are ya?		CommandPerform							Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 21	Next time, you guys owe me!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 22	Next time, you guys owe me!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 23	Can we just win already!?		CommandPerform							Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 24	You'd all be screwed without me!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 25	You'd all be screwed without me!		CommandPerform		50					Cure, Cura, Curaga									x			x														
+Eiko		Cure Party 26	Come on everyone!		CommandPerform							Cure, Cura, Curaga									x			x														
+Eiko		Damaged 1			Damaged																																	
+Eiko		Damaged 2			Damaged																																	
+Eiko		Damaged 3			Damaged																																	
+Eiko		Damaged 4			Damaged																																	
+Eiko		Damaged 5			Damaged																																	
+Eiko		Damaged 6			Damaged																																	
+Eiko		Damaged 7			Damaged																x		x		x													
+Eiko		Damaged 8	You'll regret that!		Damaged																x				x													
+Eiko		Damaged 9	How dare you!		Damaged		50														x				x													
+Eiko		Damaged 10	How dare you!		Damaged		50														x				x													
+Eiko		Damaged 11	Seriously!?		Damaged																x		x		x													
+Eiko		Damaged 12	You'll be sorry!		Damaged																x		x		x													
+Eiko		Damaged 13	Bad move!		Damaged																x		x		x													
+Eiko		Damaged 14	I'll get you for this.		Damaged																x		x		x													
+Eiko		Damaged 15	Wait for my revenge!		Damaged																x		x		x													
+Eiko		Damaged 16	I will get vengeance.		Damaged																x		x		x													
+Eiko		Damaged 17	I hate you.		Damaged																x		x		x													
+Eiko		Damaged 18	That really hurt.		Damaged																x				x						x							
+Eiko		Damaged 19	Barely left a scratch.		Damaged																x				x						x							
+Eiko		Death 1	Mog.. help me..		Added					Death																												
+Eiko		Death 2	No.. not yet.		Added					Death																												
+Eiko		Death 3	Wake me at 11...		Added					Death																												
+Eiko		Death 4	I want... a rematch.		Added					Death																												
+Eiko		Death 5	You're gonna.. pay.		Added					Death																												
+Eiko		Death 6	Just a little.. nap.		Added					Death																												
+Eiko		Death 7	I'm not.. strong enough..		Added					Death																												
+Eiko		Death 8	How.. rude..		Added					Death																												
+Eiko		Death 9	I won't.. forget this.		Added					Death																												
+Eiko		Death 10	I hate you...		Added					Death																												
+Eiko		Death 11	No.. I don't wanna sleep.		Added					Death																												
+Eiko		Death 12	I'll be back.		Added					Death																												
+Eiko		Defend 1	Don't h-h-h-it meeee.		CommandPerform			Defend																														
+Eiko		Defend 2	No thank you!		CommandPerform			Defend																														
+Eiko		Defend 3	I don't like this...		CommandPerform			Defend																														
+Eiko		Defend 4	Quick, hide!		CommandPerform			Defend																														
+Eiko		Defend 5	Defend, quick!		CommandPerform			Defend																														
+Eiko		Defend 6	I don't wanna be hurt.		CommandPerform			Defend																														
+Eiko		Defend 7	Don't hit me, don't hit me, don't hit me.		CommandPerform			Defend																														
+Eiko		Dispel 1	You can't stop me!		CommandPerform							Dispel																										
+Eiko		Dispel 2	I can break through any barrier!		CommandPerform							Dispel																										
+Eiko		Dispel 3	You can try, but I'm better!		CommandPerform							Dispel																										
+Eiko		Dispel 4	Is that all you've got?		CommandPerform							Dispel																										
+Eiko		Dispel 5	Is that all you've got?		CommandPerform							Dispel																										
+Eiko		Dispel 6	Think I can't handle this? (Cocky, not questioning herself).		CommandPerform							Dispel																										
+Eiko		Dispel 7	You can't hide behind anything!		CommandPerform							Dispel																										
+Eiko		Dodge 1	Missed me!		Dodged, Missed		50																		x													
+Eiko		Dodge 2	Missed me!		Dodged, Missed		50																		x													
+Eiko		Dodge 3	Aww, nearly.		Dodged, Missed																				x													
+Eiko		Dodge 4	Oop, try again!		Dodged, Missed																				x													
+Eiko		Dodge 5	Ohh, so close!		Dodged, Missed																				x													
+Eiko		Dodge 6	Maybe next time!		Dodged, Missed																				x													
+Eiko		Dodge 7	Not good enough!		Dodged, Missed																				x													
+Eiko		Dodge 8	Whoopsie!		Dodged, Missed																				x													
+Eiko		Dodge 9	Nope!		Dodged, Missed																				x													
+Eiko		Esuna 1	Eiko of all trades!		CommandPerform		50					Esuna									x																	
+Eiko		Esuna 2	Eiko of all trades!		CommandPerform		50					Esuna									x																	
+Eiko		Esuna 3	Doctor Eiko, at your service!		CommandPerform							Esuna									x																	
+Eiko		Esuna 4	You have enough problems as it is!		CommandPerform							Esuna									x																	
+Eiko		Esuna 5	Let's get you fixed up.		CommandPerform							Esuna									x																	
+Eiko		Esuna 6	Got 99 problems but I fix 'em all!		CommandPerform							Esuna									x																	
+Eiko		Esuna Self 1	I have enough problems thank you!		CommandPerform							Esuna											x		x													
+Eiko		Esuna Self 2	Think I can't handle myself?		CommandPerform							Esuna											x		x													
+Eiko		Esuna Self 3	I can handle more than this!		CommandPerform							Esuna											x		x													
+Eiko		Esuna Self 4	This is nothing!		CommandPerform							Esuna											x		x													
+Eiko		Esuna Self 5	Easy fix!		CommandPerform							Esuna											x		x													
+Eiko		Float 1	Being grounded is over rated!		CommandPerform							Float									x																	
+Eiko		Float 2	How's the weather up there?		CommandPerform							Float									x																	
+Eiko		Float 3	Hope you've got good balance!		CommandPerform							Float									x																	
+Eiko		Float 4	The floor is lava!		CommandPerform							Float									x																	
+Eiko		Float Self 1	I was never down to Earth anyway!		CommandPerform							Float											x															
+Eiko		Float Self 2	Always got my head in the clouds!		CommandPerform							Float											x															
+Eiko		Float Self 3	You look like ants from up here!		CommandPerform							Float											x															
+Eiko		Float Self 4	Beats walking!		CommandPerform							Float											x															
+Eiko		Float Self 5	Let's raise the stakes!		CommandPerform							Float											x															
+Eiko		Floated 1	Oh, I'm floating!		Added					Float											x																	
+Eiko		Floated 2	And I'm floating now.		Added					Float											x																	
+Eiko		Haste 1	Let's speed things up a little!		CommandPerform							Haste																										
+Eiko		Haste 2	Can we make haste?		CommandPerform							Haste																										
+Eiko		Haste 3	We don't have time for this!		CommandPerform							Haste																										
+Eiko		Haste 4	You're too slow!		CommandPerform							Haste																										
+Eiko		Haste 5	Speed is key!		CommandPerform							Haste																										
+Eiko		Haste 6	Gotta go fast!		CommandPerform							Haste																										
+Eiko		Heal 1	You're welcome.		CommandPerform		50	WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 2	Here ya go.		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 3	You're looking a little hurt.		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 4	Don't worry, I gotcha.		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 5	And, healed!		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 6	You're welcome.		CommandPerform		50	WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 7	You can say thank you now.		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 8	And you're good!!		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 9	All better!		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 10	A cure a day keeps the doctor away.		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 11	Heal!		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 12	You're safe now.		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 13	Don't worry, I gotcha.		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko		Heal 14	One heal coming up.		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna									x																	
+Eiko	$Garnet	Heal Self + Dagger 1	You're watching Dagger?		CommandPerform							Cure, Cura, Curaga, Panacea, Stona, Esuna										x	x		x													
+Eiko	$Garnet	Heal Self + Dagger 2	Take notes Dagger.		CommandPerform							Cure, Cura, Curaga, Panacea, Stona, Esuna										x	x		x													
+Eiko		Heal Self 1	No better healer than me!		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna										x	x		x													
+Eiko		Heal Self 2	Gotta look out for number 1!		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna										x	x		x													
+Eiko		Heal Self 3	I can take care of myself.		CommandPerform			WhiteMagicEiko, Item				Void, Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna										x	x		x													
+Eiko		Heal Self 4	Man, I'm good at this.		CommandPerform							Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna										x	x		x													
+Eiko		Heal Self 5	Pretty good, right?		CommandPerform							Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna										x	x		x													
+Eiko		Heal Self 6	Time to show off my skills!		CommandPerform							Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna										x	x		x													
+Eiko		Heal Self 7	I'm the best.		CommandPerform							Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna										x	x		x													
+Eiko		Heal Self 8	I'm so great.		CommandPerform							Cure, Cura, Curaga, Regen, Panacea, Stona, Esuna										x	x		x													
+Eiko		Healed 1	That's my job!		Healed																x																	
+Eiko		Healed 2	Whew, thank you!		Healed																x																	
+Eiko		Healed 3	Not as good as mine, but no one is!		Healed																x																	
+Eiko		Healed 4	Not bad, but I'm better!		Healed																x																	
+Eiko		Healed 5	That feels better!		Healed																																	
+Eiko		Healed 6	Not bad, maybe I'll teach you some day.		Healed																x																	
+Eiko		Healed 7	I didn't need help!		Healed																x																	
+Eiko		Healed 8	Good call.		Healed																x																	
+Eiko		Healed 9	Coulda done it myself y'know...		Healed																x																	
+Eiko		Healed 10	Not bad. Thanks!		Healed																x																	
+Eiko		Healed 11	Good timing!		Healed																x																	
+Eiko		Healed 12	That hit the spot.		Healed																																	
+Eiko		Healed by Dagger 1	Thanks, Dagger!		Healed				Garnet												x																	
+Eiko		Healed by Dagger 2	Not bad, Dagger! Nearly as good as me! (If Dagger healed her).		Healed				Garnet												x																	
+Eiko		Holy 1	Mog, we can do this!		CommandPerform							Holy																										
+Eiko		Holy 2	I'm not just a healer!		CommandPerform							Holy																										
+Eiko		Holy 3	Enough talk, time for some hurt!		CommandPerform							Holy																										
+Eiko		Holy 4	Holy!		CommandPerform							Holy																										
+Eiko		Holy 5	This is gonna hurt!		CommandPerform							Holy																										
+Eiko		Holy 6	Grandpa. Hear my prayer.		CommandPerform							Holy																										
+Eiko	$Garnet	Intro + Dagger 1_A	Hey Dagger, most heals wins?		BattleStart																												x	x				x
+Eiko	$Garnet	Intro + Dagger 2_A	Dagger! Show me a new Eidolon, okay?		BattleStart																												x	x				x
+Eiko	$Garnet	Intro + Dagger 3	You picked a fight with two summoners? Bad idea..		BattleStart																												x	x				x
+Eiko	$Quina	Intro + Quina_A	Whoever wins gets free lunch!		BattleStart																												x	x				x
+Eiko	$Zidane	Intro + Zidane 1_A	Get 'em Zidane!		BattleStart														x														x	x				x
+Eiko	$Zidane	Intro + Zidane 2	I'll keep you safe Zidane!		BattleStart																												x	x				x
+Eiko	$Zidane	Intro + Zidane 3	Don't you dare hurt my Zidane!		BattleStart																												x	x				x
+Eiko		Intro 1	Ohhh, we're SOOOO scared..		KillEffect												x																x	x				x
+Eiko		Intro 2	We're not afraid of you!		KillEffect												x																x	x				x
+Eiko		Intro 3	How DARE you interupt me!		KillEffect																												x	x				x
+Eiko		Intro 4	Ughh.. SIGH!!		KillEffect												x		x														x	x				x
+Eiko		Intro 5	Let's get 'em!		KillEffect																												x	x				x
+Eiko		Intro 6	Stop wasting my time!		KillEffect														x														x	x				x
+Eiko		Intro 7	Enemies? Ohh nooo.		KillEffect														x														x	x				x
+Eiko		Intro 8	Aww, look at them.		KillEffect																												x	x				x
+Eiko		Intro 9	Challenge accepted!		KillEffect																												x	x				x
+Eiko		Intro 10	I wouldn't fight us if I were you..		KillEffect												x																x	x				x
+Eiko		Intro 11	Hurt my friends and I'll kill you!		KillEffect												x																x	x				x
+Eiko		Intro 12	You wanna play?		KillEffect																												x	x				x
+Eiko		Intro 13	Whatddya think Mog? Yeah! Let's get 'em!		KillEffect														x														x	x				x
+Eiko		Intro 14	Are you brave? Or stupid? I vote number two!		KillEffect																												x	x				x
+Eiko		Intro 15	Oh wow, you're ugly!		KillEffect																												x	x				x
+Eiko		Intro 16	Could you be any uglier?		KillEffect																												x	x				x
+Eiko		Intro 17	Oh look! More fans!		KillEffect														x														x	x				x
+Eiko		Intro 18	No autographs, thank you!		KillEffect																												x	x				x
+Eiko		Intro 19	Attacking us? Not too smart are ya?		KillEffect												x																x	x				x
+Eiko		Intro 20	Aha, bad guys!		KillEffect														x														x	x				x
+Eiko		Intro 21	They think they can win? Yikes...		KillEffect														x														x	x				x
+Eiko		Intro 22	This'll be fun!		KillEffect																												x	x				x
+Eiko		Intro 23	Boy do I feel sorry for you.		KillEffect																												x	x				x
+Eiko		Intro 24	This again? Ughhhh.		KillEffect																												x	x				x
+Eiko		Intro 25	Can we hurry? We're a little busy.		KillEffect												x																x	x				x
+Eiko		Intro 26	Hey, let's ask them for directions!		KillEffect														x														x	x				x
+Eiko		Intro 27	You wanna fight? Okay!		KillEffect																												x	x				x
+Eiko		Intro 28	Ha! Look at these goons!		KillEffect														x														x	x				x
+Eiko		Intro 29	I'm not as small as I look y'know!		KillEffect																												x	x				x
+Eiko		Intro 30	Maybe these guys can cure my boredom..		KillEffect														x														x	x				x
+Eiko		Intro 31	Do these guys not know who we are?		KillEffect												x		x														x	x				x
+Eiko		Intro 32	Aww, I was hoping for a challenge.		KillEffect																												x	x				x
+Eiko		Intro 33	Typical monsters. No sense at all.		KillEffect														x														x	x				x
+Eiko		Intro 34	Rock, paper, scissors? No? Fight it is..		KillEffect																												x	x				x
+Eiko		Kill 1	Aaand got 'em!		KillEffect																																	
+Eiko		Kill 2	Ei-K.O!		KillEffect																																	
+Eiko		Kill 3	Take THAT!		KillEffect																																	
+Eiko		Kill 4	You're dead.		KillEffect																																	
+Eiko		Kill 5	Got 'em.		KillEffect																																	
+Eiko		Kill 6	It's over!		KillEffect																																	
+Eiko		Kill 7	Now sleep!		KillEffect																																	
+Eiko		Kill 8	Goodnight!		KillEffect																																	
+Eiko		Kill 9	Goodbye!		KillEffect																																	
+Eiko		Kill 10	Farewell.		KillEffect																																	
+Eiko		Kill 11	Hehehe! Got 'em.		KillEffect																																	
+Eiko		Kill 12	Leave it to me.		KillEffect																																	
+Eiko		Kill 13	Game over.		KillEffect																																	
+Eiko		Kill 14	I'm the best.		KillEffect																																	
+Eiko		Kill 15	Down you go!		KillEffect																																	
+Eiko:Blind		Kill Blind 1	Did I get 'em?		KillEffect	1																																
+Eiko:Blind		Kill Blind 2	I think I got 'em.		KillEffect	1																																
+Eiko:Blind		Kill Blind 3	I can't see but I got 'em.		KillEffect	1																																
+Eiko:Blind		Kill Blind 4	Blind attack!!		KillEffect	1																																
+Eiko:Blind		Kill Blind 5	And you're there!		KillEffect	1																																
+Eiko		Low HP 1	Not... bad.		Added					LowHP																												
+Eiko		Low HP 2	Whew.. I need a break.		Added					LowHP																												
+Eiko		Low HP 3	Don't get too cocky.		Added					LowHP																												
+Eiko		Low HP 4	Not a bad shot.		Added					LowHP																												
+Eiko		Low HP 5	That's not fair!		Added					LowHP																												
+Eiko		Low HP 6	I'm not done yet!		Added					LowHP																												
+Eiko		Low HP 7	This isn't over.		Added					LowHP																												
+Eiko		Low HP 8	Just you wait.		Added					LowHP																												
+Eiko		Low HP 9	I'm... fine.		Added					LowHP																												
+Eiko		Low HP 10	This is.. nothing.		Added					LowHP																												
+Eiko		Low HP 11	Don't count me out yet!		Added					LowHP																												
+Eiko		Low HP 12	Wanna try that again?		Added					LowHP																												
+Eiko		Low HP 13	Just you wait.		Added					LowHP																												
+Eiko		Low HP 14	You attacked the wrong girl!		Added					LowHP																												
+Eiko		Low HP 15	Aww you think you're so cool.		Added					LowHP																												
+Eiko		Low HP 16	Aww I hate you.		Added					LowHP																												
+Eiko		Low HP 17	Huh.. I mean, it doesn't hurt.		Added					LowHP																												
+Eiko		Low HP 18	Aww.. I mean, no.		Added					LowHP																												
+Eiko		Low HP 19	Oh you think you're so cool.		Added					LowHP																												
+Eiko		Low HP 20	I might need some help.		Added					LowHP																												
+Eiko		Low HP 21	It hurts a little bit but not a lot!		Added					LowHP																												
+Eiko		Mini 1	Lets shrink that ego.		CommandPerform							Mini																										
+Eiko		Mini 2_A	You'd look better bitesized!		CommandPerform							Mini																										
+Eiko		Mini 3	Small world, small you!		CommandPerform							Mini																										
+Eiko		Mini 4	Not so big now, are ya!		CommandPerform		50					Mini																										
+Eiko		Mini 5	Not so big now, are ya!		CommandPerform		50					Mini																										
+Eiko		Mini 6	Now you see them, now you don't!		CommandPerform							Mini																										
+Eiko		Mini 7	I'm sick of playing your Mini-games!		CommandPerform							Mini																										
+Eiko		Mini 8	Try hitting someone you're own size now!		CommandPerform							Mini																										
+Eiko		Mini 9	You're a tiny bit annoying!		CommandPerform							Mini																										
+Eiko		Mini 10	Your chance of winning isn't the only small thing around here!		CommandPerform							Mini																										
+Eiko		Mini 11	The smaller they are, the easier to step on?		CommandPerform							Mini																										
+Eiko		Miss 1	Ex-cuuuse me!		MissEffect, DodgeEffect																																	
+Eiko		Miss 2	Grrrrrr!		MissEffect, DodgeEffect																																	
+Eiko		Miss 3	What!?		MissEffect, DodgeEffect		50																															
+Eiko		Miss 4	What!?		MissEffect, DodgeEffect		50																															
+Eiko		Miss 5	So that's how it is?		MissEffect, DodgeEffect																																	
+Eiko		Miss 6	Oh you'll get it next time!		MissEffect, DodgeEffect																		x															
+Eiko		Miss 7	How'd I miss!		MissEffect, DodgeEffect																																	
+Eiko		Miss 8	This sucks!		MissEffect, DodgeEffect																																	
+Eiko:Blind		Miss Blind 1			MissEffect, DodgeEffect	1																																
+Eiko:Blind		Miss Blind 2	I can't see!!		MissEffect, DodgeEffect	1																																
+Eiko:Blind		Miss Blind 3	Did I get 'em?		MissEffect, DodgeEffect	1																																
+Eiko:Blind		Miss Blind 4	Aww, did I miss?		MissEffect, DodgeEffect	1																																
+Eiko:Blind		Miss Blind 5	It's not my fault, I can't see!		MissEffect, DodgeEffect	1																																
+Eiko:Blind		Miss Blind 6	Can't see!		MissEffect, DodgeEffect	1																																
+Eiko:Blind		Miss Blind 7	Ahh, it's dark!		MissEffect, DodgeEffect	1																																
+Eiko:Blind		Miss Blind 8	Ahh I can't see!		MissEffect, DodgeEffect	1	50																															
+Eiko:Blind		Miss Blind 9	I'm tired of being blind!		MissEffect, DodgeEffect	1																																
+Eiko:Blind		Miss Blind 10	Ahh I can't see!		MissEffect, DodgeEffect	1	50																															
+Eiko		Panacea 1	I got just the trick!		CommandPerform		400					Panacea									x																	
+Eiko		Panacea 2	You don't look so good..		CommandPerform		400					Panacea									x																	
+Eiko		Panacea 3	Are you okay?		CommandPerform		400					Panacea									x																	
+Eiko		Panacea 4	You're looking a little green...		CommandPerform		400					Panacea									x																	
+Eiko		Panacea 5	Eww, you look awful!		CommandPerform		400					Panacea									x																	
+Eiko		Panacea 6	Let's fix you up!		CommandPerform		400					Panacea									x																	
+Eiko		Panacea Self 1	I don't feel so....		CommandPerform		400					Panacea										x	x		x													
+Eiko		Panacea Self 2	Poison is the worst.		CommandPerform		400					Panacea										x	x		x													
+Eiko		Panacea Self 3	I feel a little noxious.		CommandPerform		400					Panacea										x	x		x													
+Eiko		Poisoned 1	I don't feel so...		Added					Poison																												
+Eiko		Poisoned 2	I'm not doing so..		Added					Poison																												
+Eiko		Poisoned 3	I don't wanna be green..		Added					Poison																												
+Eiko		Poisoned 4	Today is NOT Green day!		Added					Poison																												
+Eiko		Poisoned 5	Mog.. heeeelp.		Added					Poison																												
+Eiko		Poisoned 6	I don't feels so good		Added					Poison																												
+Eiko		Poisoned 7	I feel a little bad		Added					Poison																												
+Eiko		Poisoned 8	Im don't really feel great		Added					Poison																												
+Eiko		Poisoned 9	I feel yucky		Added					Poison																												
+Eiko		Poisoned 10	This isn't good		Added					Poison																												
+Eiko		Protect 1	I'll protect us!		CommandPerform							Protect, Shell									x																	
+Eiko		Protect 2	Try breaking through this!		CommandPerform							Protect, Shell																										
+Eiko		Protect 3	Not so tough now are they?		CommandPerform							Protect, Shell																										
+Eiko		Protect 4	I can't protect you forever!		CommandPerform							Protect, Shell									x																	
+Eiko		Protect 5	The best offense is a good defence!		CommandPerform							Protect, Shell																										
+Eiko		Protect 6	Casting Protect!		CommandPerform							Protect																										
+Eiko		Protect 7	I'll protect you.		CommandPerform							Protect, Shell									x																	
+Eiko	$Steiner	Protect 8	Guess I'm your knight now!		CommandPerform				Garnet			Protect									x																	
+Eiko		Shell 1	And... Shell!		CommandPerform							Shell																										
+Eiko		Silence 1	Shhhhhhh.		CommandPerform							Silence																										
+Eiko		Silence 2	Quiet now!		CommandPerform							Silence																										
+Eiko		Silence 3	Your voice annoys me!		CommandPerform							Silence																										
+Eiko		Silence 4	Let's have some peace and quiet.		CommandPerform							Silence																										
+Eiko		Silence 5	Silence!		CommandPerform							Silence																										
+Eiko		Silence 6	Enough talking!		CommandPerform							Silence																										
+Eiko		Silence 7	Try casting magic now!		CommandPerform							Silence																										
+Eiko		Silence 8	What's wrong, cat got your tongue?		CommandPerform							Silence																										
+Eiko		Silence 9	I'm done with your babbling.		CommandPerform							Silence																										
+Eiko		Silence 10	Monsters should be seen, not heard!		CommandPerform							Silence																										
+Eiko		Silence 11	All bite, no bark.		CommandPerform							Silence																										
+Eiko		Silence 12	Can you shush? I have a headache...		CommandPerform							Silence																										
+Eiko		Silence 13	I'd rather if you didn't talk.		CommandPerform							Silence																										
+Eiko		Silence 14	Enough of your lip.		CommandPerform							Silence																										
+Eiko		Sleepy 1	Uhh, a little sleepy		Added					Sleep																												
+Eiko		Sleepy 2	I could take a nap right now.		Added					Sleep																												
+Eiko		Sleepy 3	Uhh sleepy.		Added					Sleep																												
+Eiko		Sleepy 4	Can't keep eyes open anymore.		Added					Sleep																												
+Eiko		Stona Gradual 1	Let's not freeze up, okay?		CommandPerform				::GradualPetrify			Stona									x																	
+Eiko		Stona Gradual 2	That's enough of that!		CommandPerform				::GradualPetrify			Stona									x																	
+Eiko		Stona Gradual 3	Not if I can help it!		CommandPerform				::GradualPetrify			Stona									x																	
+Eiko		Stona Gradual 4	We don't have time for that!		CommandPerform				::GradualPetrify			Stona									x																	
+Eiko		Stona Gradual 5	Just in time!		CommandPerform				::GradualPetrify			Stona									x																	
+Eiko		Stona Gradual 6	Not while I'm around!		CommandPerform				::GradualPetrify			Stona									x																	
+Eiko		Stona Late 1	Don't be afraid!		CommandPerform				::Petrify			Stona									x																	
+Eiko		Stona Late 2	Time to get moving!		CommandPerform				::Petrify			Stona									x																	
+Eiko		Stona Late 3	Really came to a stand-still didn't you?		CommandPerform				::Petrify			Stona									x																	
+Eiko		Stona Late 4	What are ya waitin' around for?		CommandPerform				::Petrify			Stona									x																	
+Eiko		Stona Late 5	Don't just stand there!		CommandPerform				::Petrify			Stona									x																	
+Eiko		Stona Late 6	Green light!		CommandPerform				::Petrify			Stona									x																	
+Eiko		Stona Self 1	You can't stop me!		CommandPerform							Stona										x	x		x													
+Eiko		Stona Self 2	I'm not afraid!		CommandPerform							Stona										x	x		x													
+Eiko		Stona Self 3	Ain't no stopping me!		CommandPerform							Stona										x	x		x													
+Eiko		Stona Self 4	I'll stop at nothing!		CommandPerform							Stona										x	x		x													
+Eiko		Stona Self 5	I'll never stop fighting!		CommandPerform							Stona										x	x		x													
+Eiko		Summon Defence 1	I've got just the solution for this!		CommandPerform							Carbuncle1, Carbuncle2, Carbuncle3, Carbuncle4																										
+Eiko		Summon Defence 2	Think we're tough now? Watch this!		CommandPerform							Carbuncle1, Carbuncle2, Carbuncle3, Carbuncle4																										
+Eiko		Summon Defence 3	Time to level us up!		CommandPerform							Carbuncle1, Carbuncle2, Carbuncle3, Carbuncle4																										
+Eiko		Summon Defence 4	Hmm, what if we were even stronger?		CommandPerform							Carbuncle1, Carbuncle2, Carbuncle3, Carbuncle4																										
+Eiko		Summon Defence 5	Let's level the playing field!		CommandPerform							Carbuncle1, Carbuncle2, Carbuncle3, Carbuncle4																										
+Eiko		Summon Defence 6	Divine protection, hear me!		CommandPerform							Carbuncle1, Carbuncle2, Carbuncle3, Carbuncle4																										
+Eiko		Summon Offence 1	I'll deal with this.		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 2	I'd run if I were you.		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 3	Time for MY power!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 4	You ready for this?		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 5	Was nice knowin' ya!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 6	I'm not alone!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 7	Time to dieeee!		CommandPerform		50					Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 7B	Time to dieeee!		CommandPerform		50					Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 8	Time's up!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 9	Nobody hurts my friends!		CommandPerform		50					Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 9B	Nobody hurts my friends!		CommandPerform		50					Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 10	My turn!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 11	Was fun while it lasted!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 12	Try survive this!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 13	You were a worthy opponent... Not!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 14	Time to meet my other friends!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 15	I got a present for you!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 16	Check this out!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 17	Try this on for size!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 18	Let's see how you handle this!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 19	Bet ya can't do this!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 20	Ever see something like this before?		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 22	You mess with me, you mess with them!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 23	Oh, you thought we were done?		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 24	Sometimes, you jusst lose. No hard feelings.		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 25	See ya next time!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 26	Boy do I feel sorry for you!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 27	You might wanna run now.		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 28	This is the part where you lose!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 29	I'm not always mean, but this is an exception!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 30	Congratulations! You lose.		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 31	I got someone who wants to meet you!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 32	Think I'm good now? Try this!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 33	I'm not sure you can handle this one...		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 34	Game over!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Summon Offence 35	I'm bored now. Bye-bye!		CommandPerform							Fenrir1, Fenrir2, Phoenix, Madeen																										
+Eiko		Support 1	I got this!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 2	No problem!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 3	You owe me one!		CommandPerform			WhiteMagicEiko													x	x			x													
+Eiko		Support 4	This should help!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 6	Feel better?		CommandPerform			WhiteMagicEiko													x	x			x													
+Eiko		Support 7	You're looking a little rough...		CommandPerform			WhiteMagicEiko													x	x			x													
+Eiko		Support 8	C'mon, put your back into it!		CommandPerform			WhiteMagicEiko													x	x			x													
+Eiko		Support 9	What would you do without me?		CommandPerform			WhiteMagicEiko													x	x			x													
+Eiko		Support 10	Bet you're glad I'm here!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 11	I got you!		CommandPerform			WhiteMagicEiko													x	x			x													
+Eiko		Support 12	I'm not just a pretty face.		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 13	That looks painfull..		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 14	We're not done yet!		CommandPerform			WhiteMagicEiko													x	x		x														
+Eiko		Support 15	You're welcome!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 16	Try this!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 17	Need my help?		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 18	That'll be 100 gil!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 19	So you're not so tough after all?		CommandPerform			WhiteMagicEiko													x	x			x													
+Eiko		Support 20	Always needing my help!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 21	You're useless without me, huh?		CommandPerform			WhiteMagicEiko													x	x			x													
+Eiko		Support 22	Careful!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 23	Hurry up and win!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 24	Are you okay?		CommandPerform			WhiteMagicEiko													x	x			x													
+Eiko		Support 25	Maybe you should try dodging...		CommandPerform			WhiteMagicEiko													x	x			x													
+Eiko		Support 26	You can thank me later!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 27	You're welcome!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 28	My time to shine!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 29	Have you tried not getting hurt?		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Support 30	I can handle this!		CommandPerform			WhiteMagicEiko													x	x																
+Eiko		Reflect 1	Mirror, mirror, on the wall!		CommandPerform							Reflect									x																	
+Eiko		Reflect 2	Sticks and stones may break my bones..		CommandPerform							Reflect									x																	
+Eiko		Reflect 3	Let's use their own power against them!		CommandPerform							Reflect									x	x																
+Eiko		Reflect Self 1	Do you hear yourself? You should try it!		CommandPerform							Reflect										x	x		x													
+Eiko		Reflect Self 2	You'll be your own downfall!		CommandPerform							Reflect										x	x		x													
+Eiko		Reflect Self 3	Careful, you might hurt yourself.		CommandPerform							Reflect										x	x		x													
+Eiko		Revive 1	Wakey, wakey!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 2	Get, up!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 3	This is not the time!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 4	Up! We need you!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 5	You gotta do better than that!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 6	Time to get up!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 7	That's not all you've got, right?		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 8	Up and at 'em!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 9	We gonna win this or what?		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 10	You gonna let them get away with that?		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 11	You're not okay, are you?		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 12	You gonna sleep forever?		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 13	I can't do this forever y'know!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 14	I'm counting these favours y'know?		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 15	I thought you were better than this!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 16	You can't just lie there!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 17	Here, this’ll pick you up!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 18	Maybe try a different aproach next time.		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 19	If that's all you've got, I'm not doing this again!		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 20	Shame I can't revive some sense...		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Revive 21	You owe me one.		CommandPerform	1		WhiteMagicEiko, Item			PhoenixDown, PhoenixPinion	Life, FullLife																										
+Eiko		Victory 1	Now, where were we?		VictoryPose																																	
+Eiko		Victory 2	Hahaaa! I win!		VictoryPose																																	
+Eiko		Victory 3	I'm better than you thought, huh?		VictoryPose																																	
+Eiko		Victory 4	Was that suppossed to be a challenge?		VictoryPose																																	
+Eiko		Victory 5	Ea-sy!		VictoryPose																																	
+Eiko		Victory 6	Another win for us!		VictoryPose																																	
+Eiko		Victory 7			VictoryPose																																	
+Eiko		Victory 8	Piece of cake!		VictoryPose																																	
+Eiko		Victory 9	Even a Chocobo coulda beat you.		VictoryPose																																	
+Eiko		Victory 10	Now that's what I'm talkin' about.		VictoryPose																																	
+Eiko		Victory 11	I warned you.		VictoryPose																																	
+Eiko		Victory 12	First try!		VictoryPose																																	
+Eiko		Victory 13	Whew, time flies when you're having fun!		VictoryPose																																	
+Eiko		Victory 14	You lose!		VictoryPose																																	
+Eiko		Victory 15	A round of applause for me!		VictoryPose																																	
+Eiko		Victory 17	Good, right?		VictoryPose																																	
+Eiko		Victory 18	Shoulda ran when you had the chance!		VictoryPose																																	
+Eiko		Victory 19	That time already?		VictoryPose																																	
+Eiko		Victory 20	You guys are slacking!		VictoryPose																																	
+Eiko		Victory 21	Told you I was good.		VictoryPose																																	
+Eiko		Victory 22	Yeah, yeah, I'm the best, I know.		VictoryPose																																	
+Eiko		Victory 23	And done!		VictoryPose																																	
+Eiko		Victory 24	I got 'em.		VictoryPose																																	
+Eiko		Victory 25	I'm such a genious		VictoryPose																																	
+Eiko		Victory 26	Is there anyone more perfect than me?		VictoryPose																																	
+Eiko		Victory 27	Wow, I'm amazing		VictoryPose																																	
+Eiko	$!Garnet	Victory 30	Are you taking notes Dagger?		VictoryPose																																	
+Eiko	$!Steiner:LowHP	Victory 31	Hey Tin man, you doin' okay?		VictoryPose		1000																															
+Eiko	$!Zidane	Victory 32	Did you see me, Zidane!?		VictoryPose																																	
+Eiko		Victory Solo 1	Look at the mess I have to clean up...		VictoryPoseSurvivor																																	
+Eiko		Zombie 1			Added					Zombie																												
+Eiko		Zombie 2			Added					Zombie																												
+:157		24/Strike B 1	$The wind lays out my path...		CommandPerform		-100					4																										
+:157		24/Strike B 2	$The wind lays out my path...		CommandPerform		-100					4																										
+:157		24/Strike C 1	$Get out of my way...		CommandPerform		-100					5																										
+:157		24/Strike C 2	$Get out of my way...		CommandPerform		-100					5																										
