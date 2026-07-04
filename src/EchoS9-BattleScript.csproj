@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Memoria.EchoS</RootNamespace>
+    <AssemblyName>EchoS9-BattleScript</AssemblyName>
+    <TargetFramework>net35</TargetFramework>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Version>0.0.0</Version>
+    <FF9InstallLocation>$([MSBuild]::GetRegistryValueFromView(
+      'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 377840',
+      'InstallLocation',
+      null,
+      RegistryView.Registry64,
+      RegistryView.Registry32))</FF9InstallLocation>
+    <FF9InstallLocation Condition="'$(FF9InstallLocation)' == ''">$([MSBuild]::GetRegistryValueFromView(
+      'HKEY_LOCAL_MACHINE\SOFTWARE\GOG.com\Games\1375008492',
+      'path',
+      null,
+      RegistryView.Registry64,
+      RegistryView.Registry32))</FF9InstallLocation>
+    <FF9ManagedPath Condition="'$(FF9InstallLocation)' != ''">$(FF9InstallLocation)\x64\FF9_Data\Managed\</FF9ManagedPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Output\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(FF9ManagedPath)Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Memoria.Prime">
+      <HintPath>$(FF9ManagedPath)Memoria.Prime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>..\References\mscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\References\System.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\References\System.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(FF9ManagedPath)UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Source\BattleScript.cs" />
+    <Compile Include="Source\BattleScriptParser.cs" />
+    <Compile Include="Source\BattleSubtitles.cs" />
+    <Compile Include="Source\BattleSystem.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\misc\BattleLines.tsv" />
+  </ItemGroup>
+
+  <Target Name="CopyToFF9Install" AfterTargets="Build"
+          Condition="'$(FF9InstallLocation)' != '' and Exists('$(FF9InstallLocation)\[Tsunamods] Echo-S 9\')">
+    <Copy SourceFiles="$(TargetPath)"
+          DestinationFiles="$(FF9InstallLocation)\[Tsunamods] Echo-S 9\StreamingAssets\Scripts\Memoria.Scripts.[Tsunamods] Echo-S 9.dll" />
+  </Target>
+
+  <Target Name="ValidateFF9InstallLocation" BeforeTargets="ResolveAssemblyReferences;CollectReferencesForDesignTime">
+    <Error Text="[ValidateFF9InstallLocation] FF9 game installation not found. Please make sure you have installed via Steam or GOG and retry."
+           Condition="'$(FF9InstallLocation)' == '' and '$(CI)' != 'true'" />
+  </Target>
+</Project>
