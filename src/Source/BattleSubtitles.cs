@@ -1,4 +1,4 @@
-﻿using Assets.Sources.Scripts.UI.Common;
+using Assets.Sources.Scripts.UI.Common;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +15,7 @@ namespace Memoria.EchoS
 
         public void Update()
         {
-            foreach(var entry in createQueue)
+            foreach (var entry in createQueue)
             {
                 try
                 {
@@ -35,7 +35,7 @@ namespace Memoria.EchoS
             }
             createQueue.Clear();
 
-            foreach(HUDMessageChild message in deleteQueue)
+            foreach (HUDMessageChild message in deleteQueue)
             {
                 try
                 {
@@ -49,7 +49,7 @@ namespace Memoria.EchoS
 
         public void Show(BattleUnit speaker, String text)
         {
-            if (!Enabled || speaker == null || text.Length < 3 || text.StartsWith("“$")) return;
+            if (!Enabled || speaker == null || text.Length < 3 || text.StartsWith("�$")) return;
 
             createQueue[speaker] = text;
         }
@@ -75,7 +75,7 @@ namespace Memoria.EchoS
 
         private static void ListComponents(GameObject go, int indent = 0)
         {
-            Log.Message($"[DEBUG] {new string(' ', indent * 4)}> {go.name} position: {go.transform.localPosition}");
+            LogEchoS.Message($"[DEBUG] {new string(' ', indent * 4)}> {go.name} position: {go.transform.localPosition}");
             var comps = go.GetComponents<Component>();
             if (comps != null && comps.Length > 0)
             {
@@ -85,11 +85,11 @@ namespace Memoria.EchoS
                     if (c is UIWidget)
                     {
                         var w = c as UIWidget;
-                        Log.Message($"[DEBUG]   {new string(' ', indent * 4)}{c} {c.GetType()} w: {w.width} h: {w.height} localScale: {c.transform.localScale} localPosition; {c.transform.localPosition}");
+                        LogEchoS.Debug($"[DEBUG]   {new string(' ', indent * 4)}{c} {c.GetType()} w: {w.width} h: {w.height} localScale: {c.transform.localScale} localPosition; {c.transform.localPosition}");
                     }
                     else
                     {
-                        Log.Message($"[DEBUG]   {new string(' ', indent * 4)}{c} {c.GetType()}");
+                        LogEchoS.Debug($"[DEBUG]   {new string(' ', indent * 4)}{c} {c.GetType()}");
                     }
                 }
                 foreach (Transform child in go.transform)

@@ -1,20 +1,35 @@
 using Memoria.Data;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Threading;
+using UnityEngine;
 using static Memoria.Data.BattleVoice;
 using static Memoria.EchoS.BattleSystem;
 using Line = System.Collections.Generic.KeyValuePair<System.Int32, Memoria.Data.BattleVoice.BattleMoment>;
+
 
 namespace Memoria.EchoS
 {
     public class BattleScript : IOverloadVABattleScript
     {
+        private static readonly string EchoSFileIni = "[Tsunamods] Echo-S 9/Echo-S-9.ini";
+        private static Boolean VAHelpDialogBoxEnabled = false;
+
         public void Initialize()
         {
-            Log.Debug($"Initialize");
+            LoadConfiguration();
+            LogEchoS.Message("Initialize");
+
+            if (VAHelpDialogBoxEnabled)
+            {
+                GameObject pollerObj = new GameObject("EchoS_DialogHelpVA");
+                UnityEngine.Object.DontDestroyOnLoad(pollerObj);
+                pollerObj.AddComponent<DialogHelpVA>();
+            }
+
             BattleVoice.OnBattleInOut += OnBattleInOut;
             BattleVoice.OnAct += OnAct;
             BattleVoice.OnHit += OnHit;
@@ -24,20 +39,93 @@ namespace Memoria.EchoS
             Lines = BattleScriptParser.LoadLines().ToArray();
             BattleScriptParser.CountCharacterLines(Lines);
 
-            BattleSubtitles.Instance.Enabled = true;
+            foreach (var folder in AssetManager.FolderHighToLow)
+            {
+                if (folder.FolderPath.EndsWith("BattleSubtitles/"))
+                {
+                    BattleSubtitles.Instance.Enabled = true;
+                    break;
+                }
+            }
         }
 
-        public Boolean OnBattleInOut(BattleMoment when)
+        private void LoadConfiguration()
+        {
+            try
+            {
+                if (File.Exists(EchoSFileIni))
+                {
+                    LogEchoS.Message("Echo-S-9.ini detected. Loading...");
+                    string[] lines = File.ReadAllLines(EchoSFileIni);
+
+                    foreach (string line in lines)
+                    {
+                        string cleanLine = line.Trim();
+
+                        if (string.IsNullOrEmpty(cleanLine) || cleanLine.StartsWith(";") || cleanLine.StartsWith("#"))
+                            continue;
+
+                        int separatorIndex = cleanLine.IndexOf('=');
+                        if (separatorIndex < 0)
+                            continue;
+
+                        string key = cleanLine.Substring(0, separatorIndex).Trim();
+                        string value = cleanLine.Substring(separatorIndex + 1).Trim();
+
+                        if (key.Equals("Debug", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (value == "1")
+                            {
+                                LogEchoS.DebugEnable = true;
+                                LogEchoS.Message("Debug Mode ENABLED via INI file.");
+                            }
+                        }
+                        else if (key.Equals("BattleLinesPath", StringComparison.OrdinalIgnoreCase))
+                        {
+                            string customPath = value.Trim('"').Trim('\'');
+                            if (!string.IsNullOrEmpty(customPath))
+                            {
+                                BattleScriptParser.StuffListedPath = customPath;
+                                LogEchoS.Message($"Custom BattleLines path set to: {customPath}");
+                            }
+                        }
+                        else if (key.Equals("VAHelpDialog", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (value == "1")
+                            {
+                                VAHelpDialogBoxEnabled = true;
+                                LogEchoS.Message("VA for Help Dialog activated.");
+                            }
+                        }
+                    }
+                    LogEchoS.Message("Echo-S-9.ini loaded !");
+                }
+            }
+            catch (Exception ex)
+            {
+                LogEchoS.Message($"Warning: Failed to load config file. {ex.Message}");
+            }
+        }
+
+        public bool OnBattleInOut(BattleVoice.BattleMoment when)
         {
             HasFirstActHappened = false;
 
-            // Clear the queue but 1
-            if (LinesQueue.Count > 1)
+            if (when == BattleVoice.BattleMoment.BattleStart)
             {
-                Line line = LinesQueue.Dequeue();
-                LinesQueue.Clear();
-                LinesQueue.Enqueue(line);
-                Log.Debug($"Cleared all lines but '{Lines[line.Key].Path}'");
+                if (LinesQueue.Count > 0)
+                {
+                    LogEchoS.Message($"Clearing {LinesQueue.Count} leftover lines from previous battle.");
+                    LinesQueue.Clear();
+                }
+                CurrentPlayingChain = -1;
+
+                for (BTL_DATA monster = FF9StateSystem.Battle.FF9Battle.btl_list.next; monster != null; monster = monster.next)
+                {
+                    BattleUnit unit = new BattleUnit(monster);
+                    if (monster.bi.player == 0)
+                        MonsterNameWithoutTag[unit.Id] = unit.Name.RemoveTags();
+                }
             }
 
             // Custom moments
@@ -81,13 +169,12 @@ namespace Memoria.EchoS
                         break;
                     }
                 }
-                Log.Debug($"OnBattleInOut {BattleMomentEx.ToString(when)} {focusChar} RNG: {rng}/{count}");
+                LogEchoS.Debug($"OnBattleInOut {BattleMomentEx.ToString(when)} {focusChar} RNG: {rng}/{count}");
             }
             else
-                Log.Debug($"OnBattleInOut {BattleMomentEx.ToString(when)} {focusChar}");
+                LogEchoS.Debug($"OnBattleInOut {BattleMomentEx.ToString(when)} {focusChar}");
 
-            if (!CanPlayMoreLines)
-                return true;
+            if (!BattleSystem.CanPlayMoreLines) return true;
 
             if (when == BattleMoment.BattleStart)
             {
@@ -107,7 +194,7 @@ namespace Memoria.EchoS
                         enemies += $"[{unit.Name.RemoveTags()}({unit.Data.dms_geo_id})] ";
                     }
                 }
-                Log.Debug($"BattleId: {FF9StateSystem.Battle.battleMapIndex} Players: {players}Enemies: {enemies}");
+                LogEchoS.Debug($"BattleId: {FF9StateSystem.Battle.battleMapIndex} # Players: {players} # Enemies: {enemies}");
 
                 InTranceCharacters.Clear();
 
@@ -222,7 +309,7 @@ namespace Memoria.EchoS
             BattleAbilityId ability = actingChar.IsPlayer ? calc.Command.AbilityId : (BattleAbilityId)calc.Command.RawIndex;
             String abilityName = calc.Command.AbilityCastingName.RemoveTags();
             if (String.IsNullOrEmpty(abilityName) && actingChar.IsPlayer) abilityName = calc.Command.AbilityId.ToString();
-            Log.Debug($"OnBattleAct {BattleMomentEx.ToString(when)} [{actingChar.Name.RemoveTags()}({actingChar.Id})] {calc.Command.Id} [{abilityName}({(Int32)ability})] {calc.Command.TargetType} {((calc.Target != null) ? $"[{calc.Target.Name.RemoveTags()}({calc.Target.Id})]" : "")}");
+            LogEchoS.Debug($"OnBattleAct {BattleMomentEx.ToString(when)} [{actingChar.Name.RemoveTags()}({actingChar.Id})] {calc.Command.Id} [{abilityName}({(Int32)ability})] {calc.Command.TargetType} {((calc.Target != null) ? $"[{calc.Target.Name.RemoveTags()}({calc.Target.Id})]" : "")}");
 
             if (!CanPlayMoreLines)
             {
@@ -292,7 +379,7 @@ namespace Memoria.EchoS
 
             if (additionalWhen != BattleMoment.Unknown)
             {
-                Log.Debug($"OnBattleAct additional When: {additionalWhen}");
+                LogEchoS.Debug($"OnBattleAct additional When: {additionalWhen}");
                 Int32 nextId = GetRandomLine(additionalWhen, filter);
                 if (nextId >= 0)
                     QueueLine(nextId, additionalWhen);
@@ -312,13 +399,13 @@ namespace Memoria.EchoS
             // TODO: or do we? only non verbal?
             if (hitChar.CurrentHp == 0)
             {
-                Log.Debug($"OnHit {BattleMomentEx.ToString(when)} [{hitChar.Name.RemoveTags()}({hitChar.Id})] died");
+                LogEchoS.Debug($"OnHit {BattleMomentEx.ToString(when)} [{hitChar.Name.RemoveTags()}({hitChar.Id})] died");
                 CheckDeathLowHP(calc);
                 return true;
             }
 
             BattleAbilityId ability = calc.Caster.IsPlayer ? calc.Command.AbilityId : (BattleAbilityId)calc.Command.RawIndex;
-            Log.Debug($"OnHit {BattleMomentEx.ToString(when)} [{hitChar.Name.RemoveTags()}({hitChar.Id})] {calc.Command.Id} [{calc.Command.AbilityCastingName.RemoveTags()}({(Int32)ability})]");
+            LogEchoS.Debug($"OnHit {BattleMomentEx.ToString(when)} [{hitChar.Name.RemoveTags()}({hitChar.Id})] {calc.Command.Id} [{calc.Command.AbilityCastingName.RemoveTags()}({(Int32)ability})]");
 
             // Prepping flags
             UInt32 flags = Flags;
@@ -393,13 +480,13 @@ namespace Memoria.EchoS
             // Note: we don't want Zidane to say a death line after sacrifice
             if (!hasDeath && hitChar.CurrentHp == 0 && calc.Command.AbilityId != BattleAbilityId.Sacrifice)
             {
-                Log.Debug($"Death added [{hitChar.Name.RemoveTags()}({hitChar.Id})]");
+                LogEchoS.Debug($"Death added [{hitChar.Name.RemoveTags()}({hitChar.Id})]");
                 OnStatusChangeEx(hitChar, calc, BattleStatusId.Death, BattleMoment.Added);
                 return;
             }
             else if (hasDeath && hitChar.CurrentHp > 0)
             {
-                Log.Debug($"Death removed [{hitChar.Name.RemoveTags()}({hitChar.Id})]");
+                LogEchoS.Debug($"Death removed [{hitChar.Name.RemoveTags()}({hitChar.Id})]");
                 OnStatusChangeEx(hitChar, calc, BattleStatusId.Death, BattleMoment.Removed);
                 return;
             }
@@ -425,16 +512,15 @@ namespace Memoria.EchoS
 
         private void ProcessStatuses(BattleCalculator calc)
         {
-            // Delay ever so slightly so it happens after OnHit
-            if (StatusEvents.TryGetValue(calc.Command, out List<StatusEventData> statusEvents))
+            if (BattleSystem.StatusEvents.TryGetValue(calc.Command, out List<StatusEventData> events))
             {
-                StatusEvents.Remove(calc.Command);
-                new Thread(() =>
-                {
-                    Thread.Sleep(1);
-                    foreach (StatusEventData data in statusEvents)
+                BattleSystem.StatusEvents.Remove(calc.Command);
+
+                if (PersistenSingleton<BattleSubtitles>.Instance != null)
+                    PersistenSingleton<BattleSubtitles>.Instance.StartCoroutine(ProcessStatusesRoutine(events));
+                else
+                    foreach (var data in events)
                         OnStatusChangeEx(data.statusedChar, data.calc, data.status, data.when);
-                }).Start();
             }
         }
 
@@ -445,7 +531,7 @@ namespace Memoria.EchoS
 
             if (PerformingCalc != null && calc != null)
             {
-                Log.Debug($"Enqueued OnStatusChange {BattleMomentEx.ToString(when)} [{statusedChar.Name.RemoveTags()}({statusedChar.Id})] {status} [{calc.Caster?.Name.RemoveTags()}({calc.Caster?.Id})]");
+                LogEchoS.Debug($"Enqueued OnStatusChange {BattleMomentEx.ToString(when)} [{statusedChar.Name.RemoveTags()}({statusedChar.Id})] {status} [{calc.Caster?.Name.RemoveTags()}({calc.Caster?.Id})]");
                 if (!StatusEvents.ContainsKey(calc.Command))
                     StatusEvents[calc.Command] = new List<StatusEventData>();
                 StatusEvents[calc.Command].Add(new StatusEventData() { statusedChar = statusedChar, calc = calc, status = status, when = when });
@@ -461,9 +547,9 @@ namespace Memoria.EchoS
                 return true;
 
             if (calc != null)
-                Log.Debug($"OnStatusChange {BattleMomentEx.ToString(when)} [{statusedChar.Name.RemoveTags()}({statusedChar.Id})] {status} [{calc.Caster?.Name.RemoveTags()}({calc.Caster?.Id})]");
+                LogEchoS.Debug($"OnStatusChange {BattleMomentEx.ToString(when)} [{statusedChar.Name.RemoveTags()}({statusedChar.Id})] {status} [{calc.Caster?.Name.RemoveTags()}({calc.Caster?.Id})]");
             else
-                Log.Debug($"OnStatusChange {BattleMomentEx.ToString(when)} [{statusedChar.Name.RemoveTags()}({statusedChar.Id})] {status}");
+                LogEchoS.Debug($"OnStatusChange {BattleMomentEx.ToString(when)} [{statusedChar.Name.RemoveTags()}({statusedChar.Id})] {status}");
 
             if (!CanPlayMoreLines)
                 return true;
@@ -487,7 +573,7 @@ namespace Memoria.EchoS
 
                 if (status == BattleStatusId.LowHP && when == BattleMoment.Added && OnDeathCalc == calc)
                 {
-                    Log.Debug($"OnStatusChange LowHP after revive prevented");
+                    LogEchoS.Debug($"OnStatusChange LowHP after revive prevented");
                     OnDeathCalc = null;
                     return true;
                 }
@@ -548,7 +634,7 @@ namespace Memoria.EchoS
 
         public void OnDialogAudioStart(Int32 voiceId, String text)
         {
-            Log.Debug($"OnBattleDialogAudioStart {voiceId} '{text}'");
+            LogEchoS.Debug($"OnBattleDialogAudioStart {voiceId} '{text}'");
             CurrentPlayingDialog = voiceId;
             LinesQueue.Clear();
             StopAllVoices();
@@ -557,27 +643,19 @@ namespace Memoria.EchoS
 
         public void OnDialogAudioEnd(Int32 voiceId, String text)
         {
-            Log.Debug($"OnBattleDialogAudioEnd {voiceId} '{text}'");
+            LogEchoS.Debug($"OnBattleDialogAudioEnd {voiceId} '{text}'");
             if (CurrentPlayingDialog == voiceId)
                 CurrentPlayingDialog = -1;
         }
-    }
 
-    public static class Log
-    {
-        public static void Message(String msg)
+        private IEnumerator ProcessStatusesRoutine(List<StatusEventData> events)
         {
-            Prime.Log.Message($"[Echo-S] {msg}");
-        }
-        public static void Debug(String msg)
-        {
-#if DEBUG
-            Prime.Log.Message($" [Echo-S] {msg}");
-#endif
-        }
-        public static void Warning(String msg)
-        {
-            Prime.Log.Warning($"  [Echo-S] {msg}");
+            yield return null;
+
+            foreach (var data in events)
+            {
+                OnStatusChangeEx(data.statusedChar, data.calc, data.status, data.when);
+            }
         }
     }
 
