@@ -39,14 +39,8 @@ namespace Memoria.EchoS
             Lines = BattleScriptParser.LoadLines().ToArray();
             BattleScriptParser.CountCharacterLines(Lines);
 
-            foreach (var folder in AssetManager.FolderHighToLow)
-            {
-                if (folder.FolderPath.EndsWith("BattleSubtitles/"))
-                {
-                    BattleSubtitles.Instance.Enabled = true;
-                    break;
-                }
-            }
+            if (Configuration.Mod.FolderNames.Contains("[Tsunamods] Echo-S 9/BattleSubtitles"))
+                BattleSubtitles.Instance.Enabled = true;
         }
 
         private void LoadConfiguration()

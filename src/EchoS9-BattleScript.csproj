@@ -66,24 +66,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Source\BattleMomentEx.cs" />
     <Compile Include="Source\BattleScript.cs" />
     <Compile Include="Source\BattleScriptParser.cs" />
+    <Compile Include="Source\BattleSpeakerEx.cs" />
     <Compile Include="Source\BattleSubtitles.cs" />
     <Compile Include="Source\BattleSystem.cs" />
+    <Compile Include="Source\DialogHelpVA.cs" />
+    <Compile Include="Source\LineEntry.cs" />
+    <Compile Include="Source\LineEntryFlag.cs" />
+    <Compile Include="Source\LogEchoS.cs" />
+    <Compile Include="Source\StatusEventData.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="..\misc\BattleLines.tsv" />
   </ItemGroup>
 
-  <Target Name="CopyToFF9Install" AfterTargets="Build"
-          Condition="'$(FF9InstallLocation)' != '' and Exists('$(FF9InstallLocation)\[Tsunamods] Echo-S 9\')">
-    <Copy SourceFiles="$(TargetPath)"
-          DestinationFiles="$(FF9InstallLocation)\[Tsunamods] Echo-S 9\StreamingAssets\Scripts\Memoria.Scripts.[Tsunamods] Echo-S 9.dll" />
+  <Target Name="CopyToFF9Install" AfterTargets="Build" Condition="'$(FF9InstallLocation)' != '' and Exists('$(FF9InstallLocation)\[Tsunamods] Echo-S 9\')">
+    <Copy SourceFiles="$(TargetPath)" DestinationFiles="$(FF9InstallLocation)\[Tsunamods] Echo-S 9\StreamingAssets\Scripts\Memoria.Scripts.[Tsunamods] Echo-S 9.dll" />
   </Target>
 
   <Target Name="ValidateFF9InstallLocation" BeforeTargets="ResolveAssemblyReferences;CollectReferencesForDesignTime">
-    <Error Text="[ValidateFF9InstallLocation] FF9 game installation not found. Please make sure you have installed via Steam or GOG and retry."
-           Condition="'$(FF9InstallLocation)' == '' and '$(CI)' != 'true'" />
+    <Error Text="[ValidateFF9InstallLocation] FF9 game installation not found. Please make sure you have installed via Steam or GOG and retry." Condition="'$(FF9InstallLocation)' == '' and '$(CI)' != 'true'" />
   </Target>
 </Project>
