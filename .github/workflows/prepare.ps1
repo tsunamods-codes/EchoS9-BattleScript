@@ -18,8 +18,18 @@ Write-Output "_RELEASE_VERSION=${env:_RELEASE_VERSION}" >> ${env:GITHUB_ENV}
 Write-Output "_IS_BUILD_CANARY=${env:_IS_BUILD_CANARY}" >> ${env:GITHUB_ENV}
 Write-Output "_IS_GITHUB_RELEASE=${env:_IS_GITHUB_RELEASE}" >> ${env:GITHUB_ENV}
 
-# Extract game dependencies
-7z x .\misc\Dependencies.7z -p"$($env:ARCHIVE_PASSWORD)" -oReferences -y
+# Extract game dependencies only when cache is missing
+$referencesDll = Get-ChildItem -Path ".\References\*.dll" -ErrorAction SilentlyContinue
+if ($referencesDll -and $referencesDll.Count -gt 0) {
+  Write-Output "Using cached game dependencies from References."
+}
+else {
+  if ([string]::IsNullOrWhiteSpace($env:ARCHIVE_PASSWORD)) {
+    throw "Dependencies cache was not found and ARCHIVE_PASSWORD is empty. Run the cache workflow or provide DEPENDENCIES_PASSWORD for trusted runs."
+  }
+
+  7z x .\misc\Dependencies.7z -p"$($env:ARCHIVE_PASSWORD)" -oReferences -y
+}
 
 # Prepare fake game installation path
 $memoriaRoot = Join-Path $PWD "Memoria"

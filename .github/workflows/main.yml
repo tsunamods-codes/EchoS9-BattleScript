@@ -38,6 +38,12 @@ jobs:
         git config --global core.longpaths true
     - name: Checkout
       uses: actions/checkout@v4.1.0
+    - name: Restore dependency cache
+      id: dependency-cache
+      uses: actions/cache/restore@v6
+      with:
+        path: References
+        key: windows-dependencies-${{ hashFiles('misc/Dependencies.7z') }}
     - name: Prepare Environment
       run: ".github/workflows/prepare.ps1"
       shell: pwsh
