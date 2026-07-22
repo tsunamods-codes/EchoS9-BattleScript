@@ -1,4 +1,4 @@
-﻿using Memoria.Data;
+using Memoria.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,338 +10,248 @@ namespace Memoria.EchoS
 {
     public static class BattleScriptParser
     {
-        public static FileSystemWatcher watcher = null;
-        public static Boolean Loading = false;
+        public static FileSystemWatcher watcher;
+        public static bool Loading;
+        public static String StuffListedPath = "[Tsunamods] Echo-S 9/BattleLines.tsv";
+
         public static IEnumerable<LineEntry> LoadLines()
         {
             Loading = true;
-            try
+            List<LineEntry> lines = new List<LineEntry>();
+            List<LineEntry> customLines = new List<LineEntry>();
+            Dictionary<int, string> chainLinks = new Dictionary<int, string>();
+            Dictionary<int, string> customChainLinks = new Dictionary<int, string>();
+
+            Stream stream = null;
+            string fullPath = null;
+
+            string assetPath = AssetManager.SearchAssetOnDisc(StuffListedPath, false, false);
+
+            if (!string.IsNullOrEmpty(assetPath))
             {
-                List<LineEntry> lines = new List<LineEntry>();
-                List<LineEntry> customLines = new List<LineEntry>();
-                Dictionary<Int32, String> chains = new Dictionary<Int32, String>();
-                Dictionary<Int32, String> customChains = new Dictionary<Int32, String>();
-                List<String> dbLocations = FindExternalDatabases();
-
-                Log.Message("[Echo-S] BattleLines merge order source: AssetManager.FolderHighToLow (high -> low).");
-                if (dbLocations.Count > 0)
-                {
-                    for (Int32 i = 0; i < dbLocations.Count; i++)
-                    {
-                        Log.Message($"[Echo-S] BattleLines source[{i}] relative='{ToRelativeGamePath(dbLocations[i])}' full='{dbLocations[i]}'");
-                    }
-                }
-                else
-                {
-                    Log.Message("[Echo-S] No external BattleLines.tsv found in active folders.");
-                }
-
-                ConfigureWatcher(dbLocations);
-
-                if (dbLocations.Count > 0)
-                {
-                    for (Int32 i = 0; i < dbLocations.Count; i++)
-                    {
-                        String dbLocation = dbLocations[i];
-                        Log.Message($"Loading external database '{dbLocation}'");
-                        using (Stream stream = File.OpenRead(dbLocation))
-                        using (StreamReader reader = new StreamReader(stream))
-                            ParseRows(reader, dbLocation, lines, customLines, chains, customChains);
-                    }
-                }
-                else
-                {
-                    using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Memoria.EchoS.BattleLines.tsv"))
-                    {
-                        if (stream == null)
-                        {
-                            Log.Warning("[Echo-S] No external BattleLines.tsv found and embedded resource is missing. Loading empty battle lines.");
-                            BattleSystem.CustomLineStart = 0;
-                            return new List<LineEntry>();
-                        }
-
-                        Log.Message("[Echo-S] Fallback: loading embedded resource 'Memoria.EchoS.BattleLines.tsv'.");
-                        using (StreamReader reader = new StreamReader(stream))
-                            ParseRows(reader, "Memoria.EchoS.BattleLines.tsv", lines, customLines, chains, customChains);
-                    }
-                }
-
-                // Check for chains
-                foreach (Int32 key in chains.Keys)
-                {
-                    String path = chains[key];
-                    for (Int32 i = 0; i < lines.Count; i++)
-                    {
-                        if (lines[i].Path == path)
-                        {
-                            LineEntry entry = lines[key];
-                            entry.ChainId = i;
-                            lines[key] = entry;
-                            break;
-                        }
-                    }
-
-                    if (lines[key].ChainId < 0)
-                        Log.Warning($"Couldn't find next line in the chain '{chains[key]}'");
-                }
-
-                foreach (Int32 key in customChains.Keys)
-                {
-                    String path = customChains[key];
-                    for (Int32 i = 0; i < customLines.Count; i++)
-                    {
-                        if (customLines[i].Path == path)
-                        {
-                            LineEntry entry = customLines[key];
-                            entry.ChainId = i;
-                            customLines[key] = entry;
-                            break;
-                        }
-                    }
-
-                    if (customLines[key].ChainId < 0)
-                        Log.Warning($"Couldn't find next line in the chain '{customChains[key]}'");
-                }
-
-                Log.Message($"[Echo-S] BattleLines merged counts: regular={lines.Count}, custom={customLines.Count}, total={lines.Count + customLines.Count}");
-
-                BattleSystem.CustomLineStart = lines.Count;
-
-                List<LineEntry> merged = new List<LineEntry>(lines.Count + customLines.Count);
-                merged.AddRange(lines);
-                merged.AddRange(customLines);
-                return merged;
+                fullPath = Path.Combine(Environment.CurrentDirectory, assetPath);
             }
-            finally
+            else
+            {
+                string directPath = Path.Combine(Environment.CurrentDirectory, StuffListedPath);
+                if (File.Exists(directPath))
+                {
+                    fullPath = directPath;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(fullPath) && File.Exists(fullPath))
+            {
+                LogEchoS.Message($"Loading external database '{fullPath}'");
+                try
+                {
+                    stream = File.OpenRead(fullPath);
+
+                    if (watcher == null)
+                    {
+                        watcher = new FileSystemWatcher(Path.GetDirectoryName(fullPath), Path.GetFileName(fullPath))
+                        {
+                            NotifyFilter = NotifyFilters.LastWrite,
+                            IncludeSubdirectories = false
+                        };
+                        watcher.Changed += (sender, e) =>
+                        {
+                            if (e.ChangeType != WatcherChangeTypes.Changed || Loading) return;
+                            BattleSystem.Lines = LoadLines().ToArray();
+                        };
+                        watcher.EnableRaisingEvents = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    LogEchoS.Message($"Failed to open file '{fullPath}': {ex.Message}");
+                    stream = null;
+                }
+            }
+            else
+            {
+                LogEchoS.Message($"[BattleScriptParser] File not found: '{StuffListedPath}'. Please check the path or mod installation.");
+            }
+
+            if (stream == null)
             {
                 Loading = false;
+                yield break;
             }
-        }
 
-        private static List<String> FindExternalDatabases()
-        {
-            List<String> result = new List<String>();
-            HashSet<String> unique = new HashSet<String>(StringComparer.OrdinalIgnoreCase);
-
-            if (AssetManager.FolderHighToLow != null)
+            using (StreamReader reader = new StreamReader(stream))
             {
-                foreach (var folder in AssetManager.FolderHighToLow)
+                reader.ReadLine();
+                int lineNumber = 1;
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    if (folder == null || String.IsNullOrEmpty(folder.FolderPath))
+                    lineNumber++;
+                    if (string.IsNullOrEmpty(line) || line.Trim().Length == 0) continue;
+
+                    string[] columns = line.Split('\t');
+                    if (columns.Length < 36) continue;
+
+                    BattleSpeakerEx speaker = ParseSpeaker(columns[0]);
+                    if (speaker == null)
+                    {
+                        LogEchoS.Message($"Speaker missing or invalid at line {lineNumber}");
                         continue;
-
-                    String relativePath = folder.FolderPath + "BattleLines.tsv";
-                    String fullPath = Path.Combine(Environment.CurrentDirectory, relativePath);
-                    if (File.Exists(fullPath) && unique.Add(fullPath))
-                        result.Add(fullPath);
-                }
-            }
-
-            // Backward-compatible fallback for setups where folder listing doesn't expose all roots.
-            String fallbackPath = AssetManager.SearchAssetOnDisc("BattleLines.tsv", false, false);
-            if (!String.IsNullOrEmpty(fallbackPath))
-            {
-                String fullPath = Path.Combine(Environment.CurrentDirectory, fallbackPath);
-                if (File.Exists(fullPath) && unique.Add(fullPath))
-                    result.Add(fullPath);
-            }
-
-            return result;
-        }
-
-        private static String ToRelativeGamePath(String fullPath)
-        {
-            String gameRoot = Environment.CurrentDirectory;
-            String normalizedRoot = gameRoot.EndsWith(Path.DirectorySeparatorChar.ToString()) ? gameRoot : gameRoot + Path.DirectorySeparatorChar;
-            if (fullPath.StartsWith(normalizedRoot, StringComparison.OrdinalIgnoreCase))
-                return fullPath.Substring(normalizedRoot.Length).Replace('\\', '/');
-            return fullPath.Replace('\\', '/');
-        }
-
-        private static void ConfigureWatcher(List<String> dbLocations)
-        {
-            if (dbLocations.Count != 1)
-            {
-                if (watcher != null)
-                {
-                    watcher.EnableRaisingEvents = false;
-                    watcher.Dispose();
-                    watcher = null;
-                }
-
-                if (dbLocations.Count > 1)
-                    Log.Message("[Echo-S] Disabled BattleLines file watcher because multiple databases are active.");
-
-                return;
-            }
-
-            String dbLocation = dbLocations[0];
-            String watcherPath = Path.GetDirectoryName(dbLocation);
-            String watcherFilter = Path.GetFileName(dbLocation);
-
-            if (watcher != null)
-            {
-                Boolean sameTarget =
-                    String.Equals(watcher.Path, watcherPath, StringComparison.OrdinalIgnoreCase)
-                    && String.Equals(watcher.Filter, watcherFilter, StringComparison.OrdinalIgnoreCase);
-                if (sameTarget)
-                {
-                    watcher.EnableRaisingEvents = true;
-                    return;
-                }
-
-                watcher.EnableRaisingEvents = false;
-                watcher.Dispose();
-                watcher = null;
-            }
-
-            watcher = new FileSystemWatcher(watcherPath, watcherFilter)
-            {
-                NotifyFilter = NotifyFilters.LastWrite,
-                IncludeSubdirectories = false
-            };
-            watcher.Changed += OnDatabaseChanged;
-            watcher.EnableRaisingEvents = true;
-        }
-
-        private static void OnDatabaseChanged(object sender, FileSystemEventArgs e)
-        {
-            if (e.ChangeType != WatcherChangeTypes.Changed || Loading)
-                return;
-            BattleSystem.Lines = LoadLines().ToArray();
-        }
-
-        private static void ParseRows(StreamReader reader, String sourceName, List<LineEntry> lines, List<LineEntry> customLines, Dictionary<Int32, String> chains, Dictionary<Int32, String> customChains)
-        {
-            String line = reader.ReadLine(); // Skips first line (header)
-            Int32 lineNumber = 1;
-            while ((line = reader.ReadLine()) != null)
-            {
-                lineNumber++;
-
-                String[] val = line.Split('\t');
-                if (val.Length < 36) continue;
-
-                // Speaker
-                BattleSpeakerEx speaker = ParseSpeaker(val[0]);
-                if (speaker == null)
-                {
-                    Log.Warning($"Speaker missing or invalid at line {lineNumber} in '{sourceName}'");
-                    continue;
-                }
-
-                // Path
-                if (String.IsNullOrEmpty(val[2]))
-                {
-                    Log.Warning($"Path missing at line {lineNumber} in '{sourceName}'");
-                    continue;
-                }
-                String path = val[2];
-                if (!path.Contains("/"))
-                {
-                    if (speaker.playerId != CharacterId.NONE)
-                        path = $"{speaker.playerId}/{val[2]}";
-                }
-
-                LineEntry entry = new LineEntry()
-                {
-                    Path = path,
-                    ChainId = -1,
-
-                    When = ParseMoments(val[5]),
-                    Speaker = speaker,
-                    Target = ParseSpeaker(val[9]),
-                    Priority = ParseInt32(val[6], 0),
-                    Weight = ParseInt32(val[7], 100) / 100f,
-
-                    BattleId = ParseInt32Array(val[13], -1),
-
-                    ScenarioMin = ParseInt32(val[14], 0),
-                    ScenarioMax = ParseInt32(val[15], 0),
-
-                    CommandId = ParseEnumMulti<BattleCommandId>(val[8]),
-                    Abilities = ParseAbilities(val[12]),
-                    Statuses = ParseEnumMulti<BattleStatusId>(val[10])
-                };
-
-                if (entry.When == null)
-                {
-                    Log.Warning($"Moment missing or invalid at line {lineNumber} in '{sourceName}'");
-                    continue;
-                }
-
-                // Parsing With
-                if (val[1].Length > 0)
-                {
-                    List<BattleSpeakerEx> list = new List<BattleSpeakerEx>();
-                    String[] tokens = val[1].Split(',');
-                    foreach (String token in tokens)
-                    {
-                        BattleSpeakerEx with = ParseSpeaker(token.Trim());
-                        if (with != null)
-                            list.Add(with);
                     }
-                    if (list.Count > 0)
-                        entry.With = list.ToArray();
-                }
 
-                // Parsing Context Flags
-                if (val[16].Length > 0)
-                {
-                    BattleCalcFlags[] flags = ParseEnumMulti<BattleCalcFlags>(val[16]);
-                    entry.ContextFlags = 0;
-                    if (flags != null)
+                    if (string.IsNullOrEmpty(columns[2]))
                     {
-                        foreach (BattleCalcFlags flag in flags)
-                            entry.ContextFlags |= flag;
+                        LogEchoS.Message($"Path missing {lineNumber}");
+                        continue;
+                    }
+
+                    string path = columns[2];
+                    if (!path.Contains("/") && speaker.playerId != CharacterId.NONE)
+                    {
+                        path = $"{speaker.playerId}/{columns[2]}";
+                    }
+
+                    ParseBattleIds(columns[13], out int[] bIds, out bool bBlacklist);
+
+                    LineEntry entry = new LineEntry
+                    {
+                        Path = path,
+                        ChainId = -1,
+                        When = ParseMoments(columns[5]),
+                        Speaker = speaker,
+                        Target = ParseSpeaker(columns[9]),
+                        Priority = ParseInt32(columns[6], 0),
+                        Weight = ParseInt32(columns[7], 100) / 100f,
+                        BattleIds = bIds,
+                        BattleIdIsBlacklist = bBlacklist,
+                        ScenarioMin = ParseInt32(columns[14], 0),
+                        ScenarioMax = ParseInt32(columns[15], 0),
+                        Statuses = ParseEnumMulti<BattleStatusId>(columns[10])
+                    };
+
+                    string commandIdRaw = columns[8].Trim();
+                    if (!string.IsNullOrEmpty(commandIdRaw))
+                    {
+                        if (commandIdRaw.StartsWith("!"))
+                        {
+                            entry.CommandIdIsBlacklist = true;
+                            commandIdRaw = commandIdRaw.Substring(1).Trim();
+                        }
+                        entry.CommandId = ParseEnumMulti<BattleCommandId>(commandIdRaw);
+                    }
+
+                    string abilitiesRaw = columns[12].Trim();
+                    if (!string.IsNullOrEmpty(abilitiesRaw))
+                    {
+                        if (abilitiesRaw.StartsWith("!"))
+                        {
+                            entry.AbilitiesIsBlacklist = true;
+                            abilitiesRaw = abilitiesRaw.Substring(1).Trim();
+                        }
+                        entry.Abilities = ParseAbilities(abilitiesRaw);
+                    }
+
+                    if (entry.When == null)
+                    {
+                        LogEchoS.Message($"Moment missing or invalid at line {lineNumber}");
+                        continue;
+                    }
+
+                    if (columns[1].Length > 0)
+                    {
+                        List<BattleSpeakerEx> withList = new List<BattleSpeakerEx>();
+                        string[] withParts = columns[1].Split(',');
+                        foreach (string part in withParts)
+                        {
+                            BattleSpeakerEx withSpeaker = ParseSpeaker(part.Trim());
+                            if (withSpeaker != null) withList.Add(withSpeaker);
+                        }
+                        if (withList.Count > 0) entry.With = withList.ToArray();
+                    }
+
+                    if (columns[16].Length > 0)
+                    {
+                        BattleCalcFlags[] ctxFlags = ParseEnumMulti<BattleCalcFlags>(columns[16]);
+                        entry.ContextFlags = 0;
+                        if (ctxFlags != null)
+                        {
+                            foreach (BattleCalcFlags f in ctxFlags) entry.ContextFlags |= f;
+                        }
+                        else
+                        {
+                            LogEchoS.Message($"Couldn't parse Context Flags '{columns[16]}' at line {lineNumber}");
+                        }
+                    }
+
+                    for (ushort i = 0; i < 22; i++)
+                    {
+                        if (columns[17 + i].Length == 0)
+                        {
+                            entry.Flags |= (LineEntryFlag)(1U << i);
+                        }
+                    }
+
+                    if (columns[11].Length > 0)
+                    {
+                        entry.Items = ParseEnumMulti<RegularItem>(columns[11]);
+                        if (entry.Items == null) LogEchoS.Message($"Couldn't parse items '{columns[11]}' at line {lineNumber}");
+                    }
+
+                    string textVal = columns[3].Trim();
+                    if (textVal.Length > 0) entry.Text = textVal;
+
+                    if (entry.When.Contains((BattleVoice.BattleMoment)BattleMomentEx.Custom))
+                    {
+                        if (columns[4].Length > 0) customChainLinks.Add(customLines.Count, columns[4]);
+                        customLines.Add(entry);
                     }
                     else
-                        Log.Warning($"Couldn't parse Context Flags '{val[16]}' at line {lineNumber} in '{sourceName}'");
-                }
-
-                // Parsing Flags
-                for (UInt16 i = 0; i < 22; i++)
-                {
-                    if (val[17 + i].Length == 0)
-                        entry.Flags |= (UInt32)(1 << i);
-                }
-
-                // Parsing Items
-                if (val[11].Length > 0)
-                {
-                    entry.Items = ParseEnumMulti<RegularItem>(val[11]);
-                    if (entry.Items == null)
-                        Log.Warning($"Couldn't parse items '{val[11]}' at line {lineNumber} in '{sourceName}'");
-                }
-
-                // Parse Text
-                String text = val[3].Trim();
-                if (text.Length > 0)
-                    entry.Text = text;
-
-                // Check if file exists
-                if (true)
-                {
-                    String filePath = entry.Path;
-                    if (!AssetManager.HasAssetOnDisc($"Sounds/Voices/US/Battle/{filePath}.akb", true, true) && !AssetManager.HasAssetOnDisc($"Sounds/Voices/US/Battle/{filePath}.ogg", true, false))
-                        Log.Warning($"'{filePath}' is missing");
-                }
-
-                // Add line to the list
-                if (entry.When.Contains(BattleMomentEx.Custom))
-                {
-                    if (val[4].Length > 0)
-                        customChains.Add(customLines.Count, val[4]);
-                    customLines.Add(entry);
-                }
-                else
-                {
-                    // Add chain value to look up
-                    if (val[4].Length > 0)
-                        chains.Add(lines.Count, val[4]);
-                    lines.Add(entry);
+                    {
+                        if (columns[4].Length > 0) chainLinks.Add(lines.Count, columns[4]);
+                        lines.Add(entry);
+                    }
                 }
             }
+
+            foreach (var link in chainLinks)
+            {
+                string targetPath = link.Value;
+                for (int k = 0; k < lines.Count; k++)
+                {
+                    if (lines[k].Path == targetPath)
+                    {
+                        LineEntry update = lines[link.Key];
+                        update.ChainId = k;
+                        lines[link.Key] = update;
+                        break;
+                    }
+                }
+                if (lines[link.Key].ChainId < 0) LogEchoS.Message($"Couldn't find next line in the chain '{targetPath}'");
+            }
+
+            foreach (var link in customChainLinks)
+            {
+                string targetPath = link.Value;
+                for (int l = 0; l < customLines.Count; l++)
+                {
+                    if (customLines[l].Path == targetPath)
+                    {
+                        LineEntry update = customLines[link.Key];
+                        update.ChainId = l;
+                        customLines[link.Key] = update;
+                        break;
+                    }
+                }
+                if (customLines[link.Key].ChainId < 0) LogEchoS.Message($"Couldn't find next line in the chain '{targetPath}'");
+            }
+
+            LogEchoS.Message($"Total lines successfully loaded '{lines.Count + customLines.Count}'");
+            BattleSystem.CustomLineStart = lines.Count;
+
+            foreach (var lineItem in lines) yield return lineItem;
+            foreach (var customItem in customLines) yield return customItem;
+
+            Loading = false;
         }
 
         public static void CountCharacterLines(LineEntry[] lines)
@@ -376,7 +286,7 @@ namespace Memoria.EchoS
 
             foreach (var player in linesPerChar)
             {
-                Log.Message($"{player.Key}: {player.Value.Count} unique lines");
+                LogEchoS.Message($"{player.Key}: {player.Value.Count} unique lines");
             }
         }
 
@@ -387,42 +297,9 @@ namespace Memoria.EchoS
 
             if (!Int32.TryParse(value, out defaultValue))
             {
-                Log.Warning($"Couldn't parse '{value}'");
+                LogEchoS.Warning($"Couldn't parse '{value}'");
             }
             return defaultValue;
-        }
-
-        private static Int32[] ParseInt32Array(String value, Int32 defaultValue)
-        {
-            if (value.Length == 0)
-                return new Int32[] { defaultValue };
-
-            const Int32 excludedBattleIdOffset = 1000000;
-
-            String[] values = value.Split(',');
-            List<Int32> result = new List<Int32>();
-            foreach (String val in values)
-            {
-                String trimmed = val.Trim();
-                if (trimmed.StartsWith("!") && trimmed.Length > 1)
-                {
-                    String excluded = trimmed.Substring(1).Trim();
-                    if (Int32.TryParse(excluded, out Int32 excludedId) && excludedId >= 0)
-                        result.Add(-(excludedId + excludedBattleIdOffset));
-                    else
-                        Log.Warning($"Couldn't parse '{trimmed}' as excluded Int32");
-                }
-                else if (Int32.TryParse(trimmed, out Int32 id))
-                {
-                    result.Add(id);
-                }
-                else
-                {
-                    Log.Warning($"Couldn't parse '{trimmed}' as Int32");
-                }
-            }
-
-            return result.Count > 0 ? result.ToArray() : new Int32[] { defaultValue };
         }
 
         private static T ParseEnum<T>(String value, T defaultValue) where T : Enum
@@ -436,7 +313,7 @@ namespace Memoria.EchoS
             }
             catch
             {
-                Log.Warning($"Couldn't parse {typeof(T)} '{value}'");
+                LogEchoS.Warning($"Couldn't parse {typeof(T)} '{value}'");
             }
             return defaultValue;
         }
@@ -457,9 +334,38 @@ namespace Memoria.EchoS
             }
             catch
             {
-                Log.Warning($"Couldn't parse {typeof(T)} '{value}'");
+                LogEchoS.Warning($"Couldn't parse {typeof(T)} '{value}'");
             }
             return null;
+        }
+
+        private static void ParseBattleIds(string value, out int[] ids, out bool isBlacklist)
+        {
+            ids = null;
+            isBlacklist = false;
+
+            if (string.IsNullOrEmpty(value) || value.Trim().Length == 0) return;
+
+            string content = value.Trim();
+
+            if (content.StartsWith("!"))
+            {
+                isBlacklist = true;
+                content = content.Substring(1);
+            }
+
+            string[] parts = content.Split(',');
+            List<int> list = new List<int>();
+
+            foreach (string s in parts)
+            {
+                if (int.TryParse(s.Trim(), out int id))
+                {
+                    list.Add(id);
+                }
+            }
+
+            if (list.Count > 0) ids = list.ToArray();
         }
 
         private static BattleAbilityId[] ParseAbilities(String value)
@@ -483,7 +389,7 @@ namespace Memoria.EchoS
             }
             catch
             {
-                Log.Warning($"Couldn't parse {typeof(BattleAbilityId)} '{value}'");
+                LogEchoS.Warning($"Couldn't parse {typeof(BattleAbilityId)} '{value}'");
             }
             return null;
         }
@@ -501,7 +407,7 @@ namespace Memoria.EchoS
                 BattleMoment moment = ParseMoment(values[i].Trim());
                 if (moment == BattleMoment.Unknown)
                 {
-                    Log.Warning($"Couldn't parse BattleMoment '{values[i].Trim()}'");
+                    LogEchoS.Warning($"Couldn't parse BattleMoment '{values[i].Trim()}'");
                     return null;
                 }
                 else
@@ -593,7 +499,7 @@ namespace Memoria.EchoS
                         // Verify the number is a valid ModelId
                         if (!FF9BattleDB.GEO.ContainsKey(modelId))
                         {
-                            Log.Warning($"Invalid model id '{modelId}'");
+                            LogEchoS.Warning($"Invalid model id '{modelId}'");
                             return null;
                         }
                         speaker.enemyModelId = modelId;
@@ -601,7 +507,7 @@ namespace Memoria.EchoS
                     // BattleId:ModelName
                     else if (!FF9BattleDB.GEO.TryGetKey(tokens[1], out speaker.enemyModelId))
                     {
-                        Log.Warning($"Invalid model name '{tokens[1]}'");
+                        LogEchoS.Warning($"Invalid model name '{tokens[1]}'");
                         return null;
                     }
                 }
