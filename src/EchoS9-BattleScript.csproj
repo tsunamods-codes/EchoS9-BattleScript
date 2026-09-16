@@ -2,7 +2,7 @@
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <RootNamespace>Memoria.EchoS</RootNamespace>
-    <AssemblyName>EchoS9-BattleScript</AssemblyName>
+    <AssemblyName>Memoria.Scripts.[Tsunamods] Echo-S 9 Disc 1 Demo</AssemblyName>
     <TargetFramework>net35</TargetFramework>
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>

@@ -15,7 +15,7 @@ namespace Memoria.EchoS
 {
     public class BattleScript : IOverloadVABattleScript
     {
-        private static readonly string EchoSFileIni = "[Tsunamods] Echo-S 9/Echo-S-9.ini";
+        private static readonly string EchoSFileIni = "[Tsunamods] Echo-S 9 Disc 1 Demo/Echo-S-9.ini";
         private static Boolean VAHelpDialogBoxEnabled = false;
 
         public void Initialize()
@@ -39,7 +39,7 @@ namespace Memoria.EchoS
             Lines = BattleScriptParser.LoadLines().ToArray();
             BattleScriptParser.CountCharacterLines(Lines);
 
-            if (Configuration.Mod.FolderNames.Contains("[Tsunamods] Echo-S 9/BattleSubtitles"))
+            if (Configuration.Mod.FolderNames.Contains("[Tsunamods] Echo-S 9 Disc 1 Demo/BattleSubtitles"))
                 BattleSubtitles.Instance.Enabled = true;
         }
 

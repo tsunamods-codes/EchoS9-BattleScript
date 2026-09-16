@@ -12,7 +12,7 @@ namespace Memoria.EchoS
     {
         public static FileSystemWatcher watcher;
         public static bool Loading;
-        public static String StuffListedPath = "[Tsunamods] Echo-S 9/BattleLines.tsv";
+        public static String StuffListedPath = "[Tsunamods] Echo-S 9 Disc 1 Demo/BattleLines.tsv";
 
         public static IEnumerable<LineEntry> LoadLines()
         {
